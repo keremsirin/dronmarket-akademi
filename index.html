@@ -1,13 +1,100 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dronmarket Akademi</title>
-  <link rel="stylesheet" href="./stylesheet/css/style.css">
-</head>
-<body>
-  <p class="bold">Merhaba Dunya!</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dronmarket Akademi</title>
+    <link rel="stylesheet" href="./stylesheet/css/style.css" />
+    <style>
+      /* Nav CSS Start */
+      #navigations a {
+        position: relative;
+      }
+      #navigations a:before {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        right: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--yellow);
+        border-radius: 4px;
+        transition: 0.5s;
+      }
+      #navigations a:hover:before {
+        width: 100%;
+        left: 0;
+        right: unset;
+      }
+
+      #search-box input {
+        background-color: transparent;
+        border: 1px solid var(--yellow);
+        border-radius: 100px;
+        padding-left: 50px;
+        padding-right: 10px;
+        width: 140px;
+        transition: 0.3s;
+      }
+      #search-box input::placeholder {
+        color: var(--yellow);
+        transition: 0.3s;
+      }
+      #search-icon {
+        background-image: url('./stylesheet/icons/search-yellow.svg');
+        width: 23px;
+        height: 23px;
+        left: 20px;
+        top: 0;
+        transition: .3s;
+      }
+      #search-box input:hover,
+      #search-box input:focus {
+        border: 1px solid var(--white);
+      }
+      #search-box input:hover::placeholder,
+      #search-box input:focus::placeholder {
+        color: var(--white);
+      }
+      #search:hover ~ #search-icon,
+      #search:focus ~ #search-icon {
+        background-image: url('./stylesheet/icons/search-white.svg');
+      }
+      /* Nav CSS End */
+    </style>
+  </head>
+  <body>
+    <nav id="navbar" class="background-dark py-1">
+      <div class="container d-flex g-0">
+        <a href="">
+          <img src="./stylesheet/img/nav-logo.png" alt="" class="img-fluid" />
+        </a>
+        <div id="navigations" class="ml-auto white-text mt-auto mb-auto">
+          <a href="" class="mx-0-5">HAKKIMIZDA</a>
+          <a href="" class="mx-0-5">EĞİTİMLERİMİZ</a>
+          <a href="" class="mx-0-5">AKADEMİK KADRO</a>
+          <a href="" class="mx-0-5">S.S.S</a>
+          <a href="" class="mx-0-5">İLETİŞİM</a>
+        </div>
+        <form
+          id="search-box"
+          class="mt-auto mb-auto mx-1"
+          role="search"
+          method="get"
+          action="https://akademi.dronmarket.com/"
+        >
+          <label class="position-relative">
+            <input
+            id="search"
+            type="search"
+            placeholder=" Arama"
+            class="py-0-5 white-text"
+            />
+            <span id="search-icon" class="my-auto position-absolute"></span>
+          </label>
+        </form>
+      </div>
+    </nav>
+  </body>
 </html>
