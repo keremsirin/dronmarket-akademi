@@ -102,6 +102,42 @@
   color: var(--white);
 }
 
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .fs-16-mobile {
+    font-size: 16px;
+  }
+  
+  .fs-18-mobile {
+    font-size: 18px;
+  }
+
+  .fs-24-mobile {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .fs-16-tablet {
+    font-size: 16px;
+  }
+  
+  .fs-18-tablet {
+    font-size: 18px;
+  }
+
+  .fs-24-tablet {
+    font-size: 24px;
+  }
+}
+
 /* Reboot CSS */
 
 *,
@@ -123,7 +159,14 @@ html {
 body {
   font-size: 1rem;
   font-weight: normal;
+  margin-top: 80px;
 }
+@media (min-width: 992px) {
+  body {
+    margin-top: 90px;
+  }
+}
+
 
 a {
   color: inherit;
