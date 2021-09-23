@@ -106,29 +106,19 @@
   background-color: var(--yellow);
 }
 
-.fs-16 {
+.fs-16-mobile {
   font-size: 16px;
 }
 
-.fs-18 {
+.fs-18-mobile {
   font-size: 18px;
 }
 
-@media (max-width: 768px) {
-  .fs-16-mobile {
-    font-size: 16px;
-  }
-  
-  .fs-18-mobile {
-    font-size: 18px;
-  }
-
-  .fs-24-mobile {
-    font-size: 24px;
-  }
+.fs-20-mobile {
+  font-size: 20px;
 }
 
-@media (max-width: 992px) {
+@media (min-width: 768px) {
   .fs-16-tablet {
     font-size: 16px;
   }
@@ -137,7 +127,29 @@
     font-size: 18px;
   }
 
+  .fs-20-tablet {
+    font-size: 20px;
+  }
+
   .fs-24-tablet {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 992px) {
+  .fs-16 {
+    font-size: 16px;
+  }
+  
+  .fs-18 {
+    font-size: 18px;
+  }
+
+  .fs-20 {
+    font-size: 20px;
+  }
+
+  .fs-24 {
     font-size: 24px;
   }
 }
