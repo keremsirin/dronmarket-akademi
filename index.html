@@ -8,6 +8,39 @@
     <link rel="stylesheet" href="./stylesheet/css/style.css" />
     <style>
       /* Nav CSS Start */
+      #navbar {
+        height: 80px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+      }
+      #navbar > .container {
+        background-color: var(--background-dark);
+      }
+      #header-logo {
+        width: 80%;
+      }
+      #navigations {
+        position: absolute;
+        left: 0;
+        top: 80px;
+        width: 100%;
+        height: calc(100vh - 80px);
+        justify-content: start;
+        background-color: var(--yellow);
+        transition: 0.5s;
+        z-index: -1;
+      }
+      #navigations ul {
+        /* display: none; */
+        width: 100%;
+      }
+      #navigations li {
+        display: block;
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
       #navigations a {
         position: relative;
       }
@@ -27,74 +60,227 @@
         left: 0;
         right: unset;
       }
-
-      #search-box input {
-        background-color: transparent;
-        border: 1px solid var(--yellow);
-        border-radius: 100px;
-        padding-left: 50px;
+      #search {
+        background-color: white;
+        color: var(--background-dark);
+        padding-left: 60px;
         padding-right: 10px;
-        width: 140px;
+        width: 100%;
         transition: 0.3s;
       }
-      #search-box input::placeholder {
-        color: var(--yellow);
+      #search::placeholder {
+        color: var(--background-dark);
+        opacity: 0.5;
         transition: 0.3s;
       }
       #search-icon {
-        background-image: url('./stylesheet/icons/search-yellow.svg');
+        background-image: url('./stylesheet/icons/search-gray.svg');
         width: 23px;
         height: 23px;
         left: 20px;
         top: 0;
-        transition: .3s;
+        transition: 0.3s;
       }
-      #search-box input:hover,
-      #search-box input:focus {
-        border: 1px solid var(--white);
+
+      .translateY-150 {
+        transform: translateY(-150%);
       }
-      #search-box input:hover::placeholder,
-      #search-box input:focus::placeholder {
-        color: var(--white);
+
+      .translateY-0 {
+        transform: translateY(0);
       }
-      #search:hover ~ #search-icon,
-      #search:focus ~ #search-icon {
-        background-image: url('./stylesheet/icons/search-white.svg');
+
+      @media (min-width: 992px) {
+        #navbar {
+          height: 90px;
+        }
+        #navbar > .container {
+          background-color: transparent;
+        }
+        #header-logo {
+          width: 100%;
+        }
+        #navigations {
+          display: block;
+          position: initial;
+          width: auto;
+          height: auto;
+          justify-content: center;
+          background-color: initial;
+          transform: translateY(0);
+          z-index: unset;
+        }
+        #navigations ul {
+        }
+        #navigations li {
+          display: inline-block;
+        }
+        #search {
+          background-color: transparent;
+          width: 140px;
+          border-radius: 100px;
+          color: white;
+          border: 1px solid var(--yellow);
+          padding-left: 50px;
+        }
+        #search::placeholder {
+          color: var(--yellow);
+          opacity: 1;
+        }
+        #search-icon {
+          background-image: url('./stylesheet/icons/search-yellow.svg');
+        }
+        #search:hover,
+        #search:focus {
+          border: 1px solid var(--white);
+        }
+        #search:hover::placeholder,
+        #search:focus::placeholder {
+          color: var(--white);
+        }
+        #search:hover ~ #search-icon,
+        #search:focus ~ #search-icon {
+          background-image: url('./stylesheet/icons/search-white.svg');
+        }
+      }
+      @media (max-width: 992px) {
+        #navbar-images {
+          width: 100%;
+        }
       }
       /* Nav CSS End */
     </style>
   </head>
   <body>
-    <nav id="navbar" class="background-dark py-1">
-      <div class="container d-flex g-0">
-        <a href="">
-          <img src="./stylesheet/img/nav-logo.png" alt="" class="img-fluid" />
-        </a>
-        <div id="navigations" class="ml-auto white-text mt-auto mb-auto">
-          <a href="" class="mx-0-5">HAKKIMIZDA</a>
-          <a href="" class="mx-0-5">EĞİTİMLERİMİZ</a>
-          <a href="" class="mx-0-5">AKADEMİK KADRO</a>
-          <a href="" class="mx-0-5">S.S.S</a>
-          <a href="" class="mx-0-5">İLETİŞİM</a>
-        </div>
-        <form
-          id="search-box"
-          class="mt-auto mb-auto mx-1"
-          role="search"
-          method="get"
-          action="https://akademi.dronmarket.com/"
-        >
-          <label class="position-relative">
-            <input
-            id="search"
-            type="search"
-            placeholder=" Arama"
-            class="py-0-5 white-text"
+    <nav id="navbar" class="d-flex align-items-center">
+      <div class="w-100 h-100 background-dark d-flex">
+        <div class="container d-flex">
+          <div id="navbar-images" class="d-flex align-items-center">
+            <a href="">
+              <img
+                src="./stylesheet/img/nav-logo.png"
+                alt=""
+                id="header-logo"
+                class="img-fluid"
+              />
+            </a>
+            <img
+              src="./stylesheet/icons/hamburger-menu.svg"
+              alt=""
+              class="ml-auto d-lg-none"
+              id="hamburger-menu"
             />
-            <span id="search-icon" class="my-auto position-absolute"></span>
-          </label>
-        </form>
+          </div>
+          <div
+            id="navigations"
+            class="
+              d-flex
+              ml-auto
+              position-lg-static
+              flex-column-reverse flex-lg-row
+              translateY-150
+            "
+          >
+            <div id="contact-links" class="d-flex d-lg-none justify-content-center flex-column my-auto">
+              <div
+                id="social-media-links"
+                class="d-flex justify-content-center"
+              >
+                <a href="" class="mx-1"><img src="./stylesheet/icons/facebook.svg" alt=""></a>
+                <a href="" class="mx-1"><img src="./stylesheet/icons/instagram.svg" alt=""></a>
+                <a href="" class="mx-1"><img src="./stylesheet/icons/youtube.svg" alt=""></a>
+              </div>
+              <a href="tel:+908505328797" class="mx-auto mt-2 white-text d-flex align-items-center">
+                <img src="./stylesheet/icons/phone.svg" alt="" class="mr-1">
+                0850 532 87 97</a>
+            </div>
+            <ul class="white-text fs-24-tablet py-2 py-lg-0 my-lg-auto">
+              <li><a href="" class="mx-0-5">HAKKIMIZDA</a></li>
+              <li><a href="" class="mx-0-5">EĞİTİMLERİMİZ</a></li>
+              <li><a href="" class="mx-0-5">AKADEMİK KADRO</a></li>
+              <li><a href="" class="mx-0-5">S.S.S</a></li>
+              <li><a href="" class="mx-0-5">İLETİŞİM</a></li>
+            </ul>
+            <form
+              id="search-box"
+              class="my-lg-auto mx-lg-1 m-0"
+              role="search"
+              method="get"
+              action="https://akademi.dronmarket.com/"
+            >
+              <label class="position-relative">
+                <input
+                  id="search"
+                  type="search"
+                  placeholder=" Arama"
+                  class="py-lg-0-5 py-1 white-text"
+                />
+                <span id="search-icon" class="my-auto position-absolute"></span>
+              </label>
+            </form>
+          </div>
+        </div>
       </div>
     </nav>
+    <script>
+      function menuToggle() {
+        var x = document.getElementById('navigations')
+        if (x.classList.contains('translateY-150')) {
+          // x.style.transform = 'translateY(0)'
+          x.classList.remove('translateY-150')
+          x.classList.add('translateY-0')
+        } else {
+          // x.style.transform = 'translateY(-150%)'
+          x.classList.remove('translateY-0')
+          x.classList.add('translateY-150')
+        }
+      }
+      document.getElementById('hamburger-menu').onclick = menuToggle
+    </script>
+
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+        libero aliquid doloribus voluptatem, cupiditate perspiciatis ullam iste
+        minus esse amet adipisci aut. Sint, totam at similique consectetur
+        delectus laboriosam alias?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+        libero aliquid doloribus voluptatem, cupiditate perspiciatis ullam iste
+        minus esse amet adipisci aut. Sint, totam at similique consectetur
+        delectus laboriosam alias?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+        libero aliquid doloribus voluptatem, cupiditate perspiciatis ullam iste
+        minus esse amet adipisci aut. Sint, totam at similique consectetur
+        delectus laboriosam alias?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+        libero aliquid doloribus voluptatem, cupiditate perspiciatis ullam iste
+        minus esse amet adipisci aut. Sint, totam at similique consectetur
+        delectus laboriosam alias?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+        libero aliquid doloribus voluptatem, cupiditate perspiciatis ullam iste
+        minus esse amet adipisci aut. Sint, totam at similique consectetur
+        delectus laboriosam alias?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+        libero aliquid doloribus voluptatem, cupiditate perspiciatis ullam iste
+        minus esse amet adipisci aut. Sint, totam at similique consectetur
+        delectus laboriosam alias?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+        libero aliquid doloribus voluptatem, cupiditate perspiciatis ullam iste
+        minus esse amet adipisci aut. Sint, totam at similique consectetur
+        delectus laboriosam alias?
+      </p>
+    </div>
   </body>
 </html>
