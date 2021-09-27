@@ -62,6 +62,61 @@
       main {
         position: relative;
       }
+      .drone-animation {
+        /* position: absolute; */
+        /* top: -160px; */
+        /* right: -80px; */
+        animation: drone-animation 5s linear infinite;
+        /* pointer-events: none; */
+      }
+      @keyframes drone-animation {
+        0% {
+          right: 50%;
+          top: 10%;
+        }
+
+        25% {
+          right: 53%;
+          top: 15%;
+        }
+        50% {
+          right: 50%;
+          top: 10%;
+        }
+        75% {
+          right: 53%;
+          top: 15%;
+        }
+        100% {
+          right: 50%;
+          top: 10%;
+        }
+      }
+      @media (min-width: 768px) {
+        @keyframes drone-animation {
+          0% {
+            right: 0%;
+            top: 50%;
+          }
+          25% {
+            right: -3%;
+            top: 55%;
+          }
+          50% {
+            right: 0%;
+            top: 60%;
+          }
+          75% {
+            right: 3%;
+            top: 55%;
+          }
+          100% {
+            right: 0%;
+            top: 50%;
+          }
+        }
+      }
+
       /* Index Header CSS End */
     </style>
   </head>
@@ -183,7 +238,9 @@
               </div>
               <div class="d-flex d-md-inline-block justify-content-around">
                 <a href="" class="primary-btn mx-xl-1">Belge Sorgulama</a>
-                <a href="" class="primary-btn ml-0 ml-md-1 ml-xl-0">Eğitim Talebi</a>
+                <a href="" class="primary-btn ml-0 ml-md-1 ml-xl-0"
+                  >Eğitim Talebi</a
+                >
               </div>
             </div>
           </div>
@@ -191,15 +248,40 @@
             src="./stylesheet/img/index-header-drone.png"
             alt=""
             id="index-header-drone"
+            class="drone-animation"
           />
         </div>
       </header>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ullam alias fugiat inventore at optio magnam. Expedita quis qui, ipsa vel esse optio corrupti iusto id, recusandae fugit odit dignissimos.</p>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ullam alias fugiat inventore at optio magnam. Expedita quis qui, ipsa vel esse optio corrupti iusto id, recusandae fugit odit dignissimos.</p>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ullam alias fugiat inventore at optio magnam. Expedita quis qui, ipsa vel esse optio corrupti iusto id, recusandae fugit odit dignissimos.</p>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ullam alias fugiat inventore at optio magnam. Expedita quis qui, ipsa vel esse optio corrupti iusto id, recusandae fugit odit dignissimos.</p>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ullam alias fugiat inventore at optio magnam. Expedita quis qui, ipsa vel esse optio corrupti iusto id, recusandae fugit odit dignissimos.</p>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ullam alias fugiat inventore at optio magnam. Expedita quis qui, ipsa vel esse optio corrupti iusto id, recusandae fugit odit dignissimos.</p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ullam
+        alias fugiat inventore at optio magnam. Expedita quis qui, ipsa vel esse
+        optio corrupti iusto id, recusandae fugit odit dignissimos.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ullam
+        alias fugiat inventore at optio magnam. Expedita quis qui, ipsa vel esse
+        optio corrupti iusto id, recusandae fugit odit dignissimos.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ullam
+        alias fugiat inventore at optio magnam. Expedita quis qui, ipsa vel esse
+        optio corrupti iusto id, recusandae fugit odit dignissimos.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ullam
+        alias fugiat inventore at optio magnam. Expedita quis qui, ipsa vel esse
+        optio corrupti iusto id, recusandae fugit odit dignissimos.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ullam
+        alias fugiat inventore at optio magnam. Expedita quis qui, ipsa vel esse
+        optio corrupti iusto id, recusandae fugit odit dignissimos.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ullam
+        alias fugiat inventore at optio magnam. Expedita quis qui, ipsa vel esse
+        optio corrupti iusto id, recusandae fugit odit dignissimos.
+      </p>
     </main>
 
     <script src="./stylesheet/js/main.js"></script>
