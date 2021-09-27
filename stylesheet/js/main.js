@@ -1,15 +1,11 @@
 function menuToggle() {
   var x = document.getElementById('navigations')
-  if (x.classList.contains('translateY-150')) {
-    x.classList.remove('translateY-150')
-    x.classList.add('translateY-0')
-    document.getElementsByTagName('main')[0].style.zIndex = '-1';
+  if (x.classList.contains('translateX-100')) {
+    x.classList.remove('translateX-100')
+    x.classList.add('translateX-0')
   } else {
-    x.classList.remove('translateY-0')
-    x.classList.add('translateY-150')
-    setTimeout(function(){
-      document.getElementsByTagName('main')[0].style.zIndex = '0';
-    }, 300); 
+    x.classList.remove('translateX-0')
+    x.classList.add('translateX-100')
   }
 }
 document.getElementById('hamburger-menu').onclick = menuToggle
