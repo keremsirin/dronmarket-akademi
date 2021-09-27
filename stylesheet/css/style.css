@@ -8945,7 +8945,7 @@ input[type='search']::-webkit-search-results-decoration {
   left: 0;
   top: 80px;
   width: 100%;
-  /* height: calc(80vh - 80px); */
+  height: calc(100vh - 80px);
   justify-content: start;
   background-color: var(--yellow);
   transition: 0.5s;
