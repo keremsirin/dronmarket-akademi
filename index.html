@@ -7,148 +7,62 @@
     <title>Dronmarket Akademi</title>
     <link rel="stylesheet" href="./stylesheet/css/style.css" />
     <style>
-      /* Nav CSS Start */
-      #navbar {
-        height: 80px;
-        position: fixed;
+      /* Index Header CSS Start */
+      header > img {
+        height: calc(100vh - 90px);
         width: 100%;
-        top: 0;
+        object-fit: cover;
       }
-      #navbar > .container {
-        background-color: var(--background-dark);
-      }
-      #header-logo {
-        width: 80%;
-      }
-      #navigations {
+      #index-header-drone {
+        width: 400px;
         position: absolute;
-        left: 0;
-        top: 80px;
-        width: 100%;
-        /* height: calc(80vh - 80px); */
-        justify-content: start;
-        background-color: var(--yellow);
-        transition: 0.5s;
-        z-index: -1;
+        right: 50%;
+        top: 20%;
+        transform: translateX(50%);
+        z-index: 0;
       }
-      #navigations ul {
-        /* display: none; */
-        width: 100%;
+      @media (min-width: 768px) {
+        #index-header-drone {
+          width: 300px;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
       }
-      #navigations li {
-        display: block;
-        text-align: center;
-        padding-top: .5rem;
-        padding-bottom: .5rem;
+      @media (min-width: 992px) {
+        #index-header-drone {
+          width: 400px;
+        }
       }
-      #navigations a {
+      @media (min-width: 1400px) {
+        #index-header-drone {
+          width: 600px;
+        }
+      }
+      #index-header-content {
+        max-width: 400px;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* transform: translateY(-50%); */
+        z-index: 1;
+      }
+      @media (min-width: 768px) {
+        #index-header-content {
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      @media (min-width: 1200px) {
+        #index-header-content {
+          max-width: 726px;
+        }
+      }
+      main {
         position: relative;
       }
-      #navigations a:before {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        right: 0;
-        width: 0;
-        height: 2px;
-        background-color: var(--yellow);
-        border-radius: 4px;
-        transition: 0.5s;
-      }
-      #navigations a:hover:before {
-        width: 100%;
-        left: 0;
-        right: unset;
-      }
-      #search {
-        background-color: white;
-        color: var(--background-dark);
-        padding-left: 60px;
-        padding-right: 10px;
-        width: 100%;
-        transition: 0.3s;
-      }
-      #search::placeholder {
-        color: var(--background-dark);
-        opacity: 0.5;
-        transition: 0.3s;
-      }
-      #search-icon {
-        background-image: url('./stylesheet/icons/search-gray.svg');
-        width: 23px;
-        height: 23px;
-        left: 20px;
-        top: 0;
-        transition: 0.3s;
-      }
-
-      .translateY-150 {
-        transform: translateY(-350%);
-      }
-
-      .translateY-0 {
-        transform: translateY(0);
-      }
-
-      @media (min-width: 992px) {
-        #navbar {
-          height: 90px;
-        }
-        #navbar > .container {
-          background-color: transparent;
-        }
-        #header-logo {
-          width: 100%;
-        }
-        #navigations {
-          display: block;
-          position: initial;
-          width: auto;
-          height: auto;
-          justify-content: center;
-          background-color: initial;
-          transform: translateY(0);
-          z-index: unset;
-        }
-        #navigations ul {
-        }
-        #navigations li {
-          display: inline-block;
-        }
-        #search {
-          background-color: transparent;
-          width: 140px;
-          border-radius: 100px;
-          color: white;
-          border: 1px solid var(--yellow);
-          padding-left: 50px;
-        }
-        #search::placeholder {
-          color: var(--yellow);
-          opacity: 1;
-        }
-        #search-icon {
-          background-image: url('./stylesheet/icons/search-yellow.svg');
-        }
-        #search:hover,
-        #search:focus {
-          border: 1px solid var(--white);
-        }
-        #search:hover::placeholder,
-        #search:focus::placeholder {
-          color: var(--white);
-        }
-        #search:hover ~ #search-icon,
-        #search:focus ~ #search-icon {
-          background-image: url('./stylesheet/icons/search-white.svg');
-        }
-      }
-      @media (max-width: 992px) {
-        #navbar-images {
-          width: 100%;
-        }
-      }
-      /* Nav CSS End */
+      /* Index Header CSS End */
     </style>
   </head>
   <body>
@@ -181,20 +95,47 @@
               translateY-150
             "
           >
-            <div id="contact-links" class="d-flex d-lg-none justify-content-center flex-column my-auto yellow-bg">
+            <div
+              id="contact-links"
+              class="
+                d-flex d-lg-none
+                justify-content-center
+                flex-column
+                my-auto
+                yellow-bg
+              "
+            >
               <div
                 id="social-media-links"
                 class="d-flex justify-content-center"
               >
-                <a href="" class="mx-1"><img src="./stylesheet/icons/facebook.svg" alt=""></a>
-                <a href="" class="mx-1"><img src="./stylesheet/icons/instagram.svg" alt=""></a>
-                <a href="" class="mx-1"><img src="./stylesheet/icons/youtube.svg" alt=""></a>
+                <a href="" class="mx-1"
+                  ><img src="./stylesheet/icons/facebook.svg" alt=""
+                /></a>
+                <a href="" class="mx-1"
+                  ><img src="./stylesheet/icons/instagram.svg" alt=""
+                /></a>
+                <a href="" class="mx-1"
+                  ><img src="./stylesheet/icons/youtube.svg" alt=""
+                /></a>
               </div>
-              <a href="tel:+908505328797" class="mx-auto my-2 white-text d-flex align-items-center">
-                <img src="./stylesheet/icons/phone.svg" alt="" class="mr-1">
-                0850 532 87 97</a>
+              <a
+                href="tel:+908505328797"
+                class="mx-auto my-2 white-text d-flex align-items-center"
+              >
+                <img src="./stylesheet/icons/phone.svg" alt="" class="mr-1" />
+                0850 532 87 97</a
+              >
             </div>
-            <ul class="white-text fs-20-mobile fs-24-tablet py-lg-0 my-lg-auto py-1">
+            <ul
+              class="
+                white-text
+                fs-20-mobile fs-16-tablet
+                py-lg-0
+                my-lg-auto
+                py-1
+              "
+            >
               <li><a href="" class="mx-0-5">HAKKIMIZDA</a></li>
               <li><a href="" class="mx-0-5">EĞİTİMLERİMİZ</a></li>
               <li><a href="" class="mx-0-5">AKADEMİK KADRO</a></li>
@@ -222,65 +163,35 @@
         </div>
       </div>
     </nav>
-    <script>
-      function menuToggle() {
-        var x = document.getElementById('navigations')
-        if (x.classList.contains('translateY-150')) {
-          // x.style.transform = 'translateY(0)'
-          x.classList.remove('translateY-150')
-          x.classList.add('translateY-0')
-        } else {
-          // x.style.transform = 'translateY(-150%)'
-          x.classList.remove('translateY-0')
-          x.classList.add('translateY-150')
-        }
-      }
-      document.getElementById('hamburger-menu').onclick = menuToggle
-    </script>
+    <main>
+      <header class="position-relative">
+        <img src="./stylesheet/img/index-header.png" alt="" />
+        <div
+          class="container position-absolute w-100 h-100 right-0 left-0 top-0"
+        >
+          <div id="index-header-content" class="position-absolute container">
+            <h1 class="bold primary-text fs-50 pb-1">Dronmarket Akademi</h1>
+            <p class="primary-text mb-2">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt
+              harum commodi cupiditate consequatur iusto accusantium animi,
+              laudantium asperiores praesentium quam?
+            </p>
+            <div id="index-header-buttons-container">
+              <a href="" class="primary-btn mb-1 mb-xl-0">İHA-0</a>
+              <a href="" class="primary-btn ml-1">İHA-1</a>
+              <a href="" class="primary-btn mx-xl-1">Belge Sorgulama</a>
+              <a href="" class="primary-btn ml-1 ml-xl-0">Eğitim Talebi</a>
+            </div>
+          </div>
+          <img
+            src="./stylesheet/img/index-header-drone.png"
+            alt=""
+            id="index-header-drone"
+          />
+        </div>
+      </header>
+    </main>
 
-    <div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-        libero aliquid doloribus voluptatem, cupiditate perspiciatis ullam iste
-        minus esse amet adipisci aut. Sint, totam at similique consectetur
-        delectus laboriosam alias?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-        libero aliquid doloribus voluptatem, cupiditate perspiciatis ullam iste
-        minus esse amet adipisci aut. Sint, totam at similique consectetur
-        delectus laboriosam alias?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-        libero aliquid doloribus voluptatem, cupiditate perspiciatis ullam iste
-        minus esse amet adipisci aut. Sint, totam at similique consectetur
-        delectus laboriosam alias?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-        libero aliquid doloribus voluptatem, cupiditate perspiciatis ullam iste
-        minus esse amet adipisci aut. Sint, totam at similique consectetur
-        delectus laboriosam alias?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-        libero aliquid doloribus voluptatem, cupiditate perspiciatis ullam iste
-        minus esse amet adipisci aut. Sint, totam at similique consectetur
-        delectus laboriosam alias?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-        libero aliquid doloribus voluptatem, cupiditate perspiciatis ullam iste
-        minus esse amet adipisci aut. Sint, totam at similique consectetur
-        delectus laboriosam alias?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-        libero aliquid doloribus voluptatem, cupiditate perspiciatis ullam iste
-        minus esse amet adipisci aut. Sint, totam at similique consectetur
-        delectus laboriosam alias?
-      </p>
-    </div>
+    <script src="./stylesheet/js/main.js"></script>
   </body>
 </html>
