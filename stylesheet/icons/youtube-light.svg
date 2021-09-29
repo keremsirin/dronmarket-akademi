@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="51" height="51" viewBox="0 0 51 51">
+  <g id="Group_20" data-name="Group 20" transform="translate(-1340 -3681)">
+    <g id="Ellipse_9" data-name="Ellipse 9" transform="translate(1340 3681)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0.2">
+      <circle cx="25.5" cy="25.5" r="25.5" stroke="none"/>
+      <circle cx="25.5" cy="25.5" r="25" fill="none"/>
+    </g>
+    <path id="icons8_youtube_play_button" d="M31.875,7.335a3.823,3.823,0,0,0-2.7-2.7C26.8,4,17.256,4,17.256,4S7.715,4,5.335,4.638a3.823,3.823,0,0,0-2.7,2.7C2,9.715,2,16.205,2,16.205s0,6.49.638,8.87a3.823,3.823,0,0,0,2.7,2.7c2.38.638,11.921.638,11.921.638s9.541,0,11.921-.638a3.821,3.821,0,0,0,2.7-2.7c.638-2.38.638-8.87.638-8.87S32.512,9.715,31.875,7.335ZM14.2,20.169V12.242a.763.763,0,0,1,1.144-.661l6.865,3.964a.763.763,0,0,1,0,1.321l-6.865,3.964A.763.763,0,0,1,14.2,20.169Z" transform="translate(1348 3690)" fill="#fff"/>
+  </g>
+</svg>
