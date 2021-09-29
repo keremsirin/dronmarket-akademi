@@ -60,11 +60,7 @@
         }
       }
       .drone-animation {
-        /* position: absolute; */
-        /* top: -160px; */
-        /* right: -80px; */
         animation: drone-animation 5s linear infinite;
-        /* pointer-events: none; */
       }
       @keyframes drone-animation {
         0% {
@@ -213,6 +209,35 @@
           min-height: 300px;
         }
       }
+
+      .cloud-animation-1 {
+        animation: cloud-animation-1 5s linear infinite;
+      }
+      .cloud-animation-2 {
+        animation: cloud-animation-2 3.5s linear infinite;
+      }
+      @keyframes cloud-animation-1 {
+        0% {
+          left: 0;
+        }
+        50% {
+          left: -10%;
+        }
+        100% {
+          left: 0;
+        }
+      }
+      @keyframes cloud-animation-2 {
+        0% {
+          right: 0;
+        }
+        50% {
+          right: -10%;
+        }
+        100% {
+          right: 0;
+        }
+      }
       /* Index About CSS End */
     </style>
   </head>
@@ -353,9 +378,9 @@
           <div class="col-lg-6 col-12 p-3">
             <div id="index-about-min-height" class="yellow-bg">
               <div id="index-about-img-container" class="position-relative">
-                <img src="./stylesheet/img/cloud-1.png" alt="" class="position-absolute">
+                <img src="./stylesheet/img/cloud-1.png" alt="" class="position-absolute cloud-animation-1">
                 <img src="./stylesheet/img/index-about-drone.png" alt="" class="position-absolute">
-                <img src="./stylesheet/img/cloud-2.png" alt="" class="position-absolute">
+                <img src="./stylesheet/img/cloud-2.png" alt="" class="position-absolute cloud-animation-2">
               </div>
             </div>
           </div>
