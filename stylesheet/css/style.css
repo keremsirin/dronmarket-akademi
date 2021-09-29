@@ -102,10 +102,6 @@
   color: var(--white);
 }
 
-.yellow-bg {
-  background-color: var(--yellow);
-}
-
 .fs-16-mobile {
   font-size: 16px;
 }
@@ -116,6 +112,10 @@
 
 .fs-20-mobile {
   font-size: 20px;
+}
+
+.fs-24-mobile {
+  font-size: 24px;
 }
 
 .fs-50-mobile {
@@ -9099,4 +9099,21 @@ input[type='search']::-webkit-search-results-decoration {
     font-size: inherit;
     width: 160px;
   }
+
+  .vertical-align-middle {
+    vertical-align: middle;
+  }
+}
+
+.span-title {
+  position: relative;
+}
+
+.span-title::after {
+  content: '';
+  border-bottom: 3px solid var(--yellow);
+  width: 75%;
+  display: block;
+  position: absolute;
+  margin-top: 4px;
 }
