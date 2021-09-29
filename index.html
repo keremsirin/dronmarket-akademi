@@ -59,9 +59,6 @@
           max-width: 726px;
         }
       }
-      main {
-        position: relative;
-      }
       .drone-animation {
         /* position: absolute; */
         /* top: -160px; */
@@ -72,22 +69,18 @@
       @keyframes drone-animation {
         0% {
           right: 50%;
-          /* top: 10%; */
           top: 6vh;
         }
-
         25% {
-          right: 53%;
-          /* top: 15%; */
+          right: 55%;
           top: 11vh;
         }
         50% {
           right: 50%;
-          /* top: 10%; */
-          top: 6vh;
+          top: 13vh;
         }
         75% {
-          right: 53%;
+          right: 45%;
           top: 11vh;
         }
         100% {
@@ -119,8 +112,29 @@
           }
         }
       }
-
       /* Index Header CSS End */
+
+      /* Index About CSS Start */
+      #index-about-img-container img:first-child {
+        margin-top: -24%;
+        margin-left: -10%;
+        width: 100%;
+      }
+      #index-about-img-container img:nth-child(2) {
+        margin-top: -10%;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+      }
+      #index-about-img-container img:last-child {
+        /* margin-top: -20%; */
+        margin-top: 16%;
+        margin-left: 50%;
+        z-index: 3;
+        width: 56%;
+      }
+      /* Index About CSS End */
     </style>
   </head>
   <body>
@@ -255,37 +269,66 @@
           />
         </div>
       </header>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ullam
-        alias fugiat inventore at optio magnam. Expedita quis qui, ipsa vel esse
-        optio corrupti iusto id, recusandae fugit odit dignissimos.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ullam
-        alias fugiat inventore at optio magnam. Expedita quis qui, ipsa vel esse
-        optio corrupti iusto id, recusandae fugit odit dignissimos.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ullam
-        alias fugiat inventore at optio magnam. Expedita quis qui, ipsa vel esse
-        optio corrupti iusto id, recusandae fugit odit dignissimos.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ullam
-        alias fugiat inventore at optio magnam. Expedita quis qui, ipsa vel esse
-        optio corrupti iusto id, recusandae fugit odit dignissimos.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ullam
-        alias fugiat inventore at optio magnam. Expedita quis qui, ipsa vel esse
-        optio corrupti iusto id, recusandae fugit odit dignissimos.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ullam
-        alias fugiat inventore at optio magnam. Expedita quis qui, ipsa vel esse
-        optio corrupti iusto id, recusandae fugit odit dignissimos.
-      </p>
+      <section id="index-about-us" class="container">
+        <div class="row mt-5 mb-5 flex-lg-row flex-column">  
+          <div class="col-lg-6 col-12 p-3">
+            <div class="yellow-bg w-100 h-100">
+              <div id="index-about-img-container" class="position-relative">
+                <img src="./stylesheet/img/cloud-1.png" alt="" class="position-absolute">
+                <img src="./stylesheet/img/index-about-drone.png" alt="" class="position-absolute">
+                <img src="./stylesheet/img/cloud-2.png" alt="" class="position-absolute">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 pl-lg-1">
+            <span class="span-title bold primary-text fs-24-mobile">Hakkımızda</span>
+            <p class="py-1-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptatibus optio eum quisquam, possimus reiciendis voluptates omnis eveniet, iusto cupiditate explicabo fugit cumque distinctio ad sed velit qui quo excepturi quibusdam nesciunt soluta nostrum! Mollitia laboriosam, laudantium debitis unde animi ex illum sed cumque aspernatur iste pariatur et facilis aliquam ducimus excepturi dicta tempora maiores recusandae eum odit dolore, perferendis quam minima! Magni pariatur officiis aliquid provident nostrum numquam ad odit fugiat harum illum ut error aspernatur quo voluptatum, cumque rem sint fuga, porro, exercitationem natus accusantium? Quibusdam ab animi autem, pariatur maxime cumque ipsum rerum nam non perferendis est.</p>
+            <a href="" class="primary-btn">Devamı</a>
+          </div>
+        </div>
+        </section>
     </main>
+    <footer>
+      <div class="background-dark white-text pt-3 pb-3">
+        <div class="container">
+          <div class="row g-0 justify-content-center">
+            <div class="col-lg-3 col-12 py-2 py-lg-0 px-md-1 order-last order-lg-first d-flex flex-column align-items-lg-left align-items-center">
+              <img src="./stylesheet/img/nav-logo.png" alt="">
+              <div class="d-flex mt-2">
+                <a href="" class="mr-0-5"><img src="./stylesheet/icons/facebook-light.svg" alt=""/></a>
+                <a href="" class="mx-0-5"><img src="./stylesheet/icons/instagram-light.svg" alt=""/></a>
+                <a href="" class="ml-0-5"><img src="./stylesheet/icons/youtube-light.svg" alt=""/></a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-12 py-2 py-lg-0 px-md-1">
+              <span class="fs-20-mobile bold span-title">Kurumsal</span>
+              <ul>
+                <li><a href="" class="d-inline-block mb-1 mt-1-5">Hakkkımızda</li></a>
+                <li><a href="" class="d-inline-block">Dronmarket</li></a>
+                <li><a href="" class="d-inline-block mt-1">Dronmarket Blog</li></a>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-12 py-2 py-lg-0 px-md-1">
+              <span class="fs-20-mobile bold span-title">Akademi</span>
+              <ul>
+                <li><a href="" class="d-inline-block mb-1 mt-1-5">Eğitim Talebi</li></a>
+                <li><a href="" class="d-inline-block">Belge Sorgulama</li></a>
+                <li><a href="" class="d-inline-block my-1">Eğitimlerimiz</li></a>
+                <li><a href="" class="d-inline-block">Akademik Kadro</li></a>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-12 py-2 py-lg-0 px-md-1">
+              <span class="fs-20-mobile bold span-title">İletişim</span>
+              <ul>
+                <li><a href="tel:+908505328797" class="d-inline-block mb-1 mt-1-5"><img src="./stylesheet/icons/phone-yellow.svg" alt="" class="mr-1 vertical-align-middle" />0850 532 87 97</a></li>
+                <li><a href="mailto:destek@dronmarket.com" class="d-inline-block"><img src="./stylesheet/icons/mail-yellow.svg" alt="" class="mr-1 vertical-align-middle" />destek@dronmarket.com</a></li>
+                <li><a href="https://g.page/dronmarket?share" target="_blank" class="d-inline-block mt-1"><img src="./stylesheet/icons/pin-yellow.svg" alt="" class="mr-1 vertical-align-middle" />Hasanpaşa Mh. Uzunçayır Cad. Yapı İş Merkezi B1 Blok No:25 İstanbul/Kadıköy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="./stylesheet/js/main.js"></script>
   </body>
