@@ -9,3 +9,34 @@ function menuToggle() {
   }
 }
 document.getElementById('hamburger-menu').onclick = menuToggle
+
+function removeGlider() {
+  var x = document.getElementsByClassName('glider-remove')[0]
+  if (window.innerWidth > 992) {
+    x.classList.remove('glider')
+  } else {
+    // window.addEventListener('resize', function () {
+    //   x.classList.add('glider')
+    //   new Glider(document.querySelector('.glider'), {
+    //     slidesToScroll: 1,
+    //     slidesToShow: 1,
+    //     draggable: true,
+    //     dots: '.dots'
+    //   })
+    // })
+    window.addEventListener('load', function () {
+      x.classList.add('glider')
+      new Glider(document.querySelector('.glider'), {
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        draggable: true,
+        dots: '.dots'
+      })
+    })
+  }
+}
+removeGlider()
+
+// window.addEventListener('resize', function (event) {
+//   removeGlider()
+// })
