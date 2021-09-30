@@ -30,7 +30,8 @@ function removeGlider() {
         slidesToScroll: 1,
         slidesToShow: 1,
         draggable: true,
-        dots: '.dots'
+        dots: '.dots',
+        scrollLock: true
       })
     })
   }
