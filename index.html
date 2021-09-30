@@ -1,189 +1,231 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dronmarket Akademi</title>
-    <link rel="stylesheet" href="./stylesheet/css/style.css" />
-    <style>
-      /* Index Header CSS Start */
-      header > img {
-        height: calc(100vh - 90px);
-        width: 100%;
-        object-fit: cover;
-      }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dronmarket Akademi</title>
+  <link rel="stylesheet" href="./stylesheet/css/style.css" />
+  <link rel="stylesheet" href="./stylesheet/css/glider.min.css">
+  <style>
+    /* Index Header CSS Start */
+    header>img {
+      height: calc(100vh - 80px);
+      width: 100%;
+      object-fit: cover;
+    }
+
+    #index-header-drone {
+      width: 200px;
+      position: absolute;
+      right: 50%;
+      top: 10%;
+      transform: translateX(50%);
+      z-index: 0;
+    }
+
+    @media (min-width: 768px) {
       #index-header-drone {
-        width: 200px;
-        position: absolute;
-        right: 50%;
-        top: 10%;
-        transform: translateX(50%);
-        z-index: 0;
+        width: 300px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
       }
-      @media (min-width: 768px) {
-        #index-header-drone {
-          width: 300px;
-          right: 0;
-          top: 50%;
-          transform: translateY(-50%);
-        }
+    }
+
+    @media (min-width: 992px) {
+      #index-header-drone {
+        width: 400px;
       }
-      @media (min-width: 992px) {
-        #index-header-drone {
-          width: 400px;
-        }
+
+      header>img {
+        height: calc(100vh - 90px);
       }
-      @media (min-width: 1400px) {
-        #index-header-drone {
-          width: 600px;
-        }
+    }
+
+    @media (min-width: 1400px) {
+      #index-header-drone {
+        width: 600px;
       }
+    }
+
+    #index-header-content {
+      max-width: 400px;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /* transform: translateY(-50%); */
+      z-index: 1;
+    }
+
+    @media (min-width: 768px) {
       #index-header-content {
-        max-width: 400px;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        /* transform: translateY(-50%); */
-        z-index: 1;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
       }
-      @media (min-width: 768px) {
-        #index-header-content {
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-        }
+    }
+
+    @media (min-width: 1200px) {
+      #index-header-content {
+        max-width: 726px;
       }
-      @media (min-width: 1200px) {
-        #index-header-content {
-          max-width: 726px;
-        }
+    }
+
+    .drone-animation {
+      animation: drone-animation 5s linear infinite;
+    }
+
+    @keyframes drone-animation {
+      0% {
+        right: 50%;
+        top: 6vh;
       }
-      .drone-animation {
-        animation: drone-animation 5s linear infinite;
+
+      25% {
+        right: 55%;
+        top: 11vh;
       }
+
+      50% {
+        right: 50%;
+        top: 13vh;
+      }
+
+      75% {
+        right: 45%;
+        top: 11vh;
+      }
+
+      100% {
+        right: 50%;
+        top: 6vh;
+      }
+    }
+
+    @media (min-width: 768px) {
       @keyframes drone-animation {
         0% {
-          right: 50%;
-          top: 6vh;
+          right: 0%;
+          top: 50%;
         }
-        25% {
-          right: 55%;
-          top: 11vh;
-        }
-        50% {
-          right: 50%;
-          top: 13vh;
-        }
-        75% {
-          right: 45%;
-          top: 11vh;
-        }
-        100% {
-          right: 50%;
-          top: 6vh;
-        }
-      }
-      @media (min-width: 768px) {
-        @keyframes drone-animation {
-          0% {
-            right: 0%;
-            top: 50%;
-          }
-          25% {
-            right: -3%;
-            top: 55%;
-          }
-          50% {
-            right: 0%;
-            top: 60%;
-          }
-          75% {
-            right: 3%;
-            top: 55%;
-          }
-          100% {
-            right: 0%;
-            top: 50%;
-          }
-        }
-      }
-      /* Index Header CSS End */
 
-      /* Index About CSS Start */
-      #index-about-img-container img:first-child {
-        margin-top: -24%;
-        margin-left: -10%;
-        width: 100%;
+        25% {
+          right: -3%;
+          top: 55%;
+        }
+
+        50% {
+          right: 0%;
+          top: 60%;
+        }
+
+        75% {
+          right: 3%;
+          top: 55%;
+        }
+
+        100% {
+          right: 0%;
+          top: 50%;
+        }
       }
-      #index-about-img-container img:nth-child(2) {
-        margin-top: 8%;
-        width: 90%;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 2;
-      }
-      #index-about-img-container img:last-child {
-        margin-top: 38%;
-        margin-left: 50%;
-        z-index: 3;
-        width: 56%;
-      }
-      @media (min-width: 576px) {
+    }
+
+    /* Index Header CSS End */
+
+    /* Index About CSS Start */
+    #index-about-img-container img:first-child {
+      margin-top: -24%;
+      margin-left: -10%;
+      width: 100%;
+    }
+
+    #index-about-img-container img:nth-child(2) {
+      margin-top: 8%;
+      width: 90%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    #index-about-img-container img:last-child {
+      margin-top: 38%;
+      margin-left: 50%;
+      z-index: 3;
+      width: 56%;
+    }
+
+    @media (min-width: 576px) {
       #index-about-img-container img:nth-child(2) {
         margin-top: 10%;
       }
+
       #index-about-img-container img:last-child {
         margin-top: 40%;
       }
-      }
-      @media (min-width: 768px) {
+    }
+
+    @media (min-width: 768px) {
       #index-about-img-container img:first-child {
         margin-top: -24%;
       }
+
       #index-about-img-container img:nth-child(2) {
         margin-top: 0;
       }
+
       #index-about-img-container img:last-child {
         margin-top: 16%;
       }
-      }
-      @media (min-width: 1200px) {
-        #index-about-img-container img:first-child {
+    }
+
+    @media (min-width: 1200px) {
+      #index-about-img-container img:first-child {
         margin-top: -24%;
       }
+
       #index-about-img-container img:nth-child(2) {
         margin-top: 4%;
       }
+
       #index-about-img-container img:last-child {
         margin-top: 28%;
       }
-      }
-      @media (min-width: 992px) {
+    }
+
+    @media (min-width: 992px) {
       #index-about-img-container img:nth-child(2) {
         margin-top: 10%;
       }
+
       #index-about-img-container img:last-child {
         margin-top: 40%;
       }
-      }
-      @media (min-width: 1200px) {
-        #index-about-img-container img:first-child {
+    }
+
+    @media (min-width: 1200px) {
+      #index-about-img-container img:first-child {
         margin-top: -24%;
       }
+
       #index-about-img-container img:nth-child(2) {
         margin-top: 4%;
       }
+
       #index-about-img-container img:last-child {
         margin-top: 28%;
       }
-      }
-      @media (min-width: 1400px) {
-        #index-about-img-container img:first-child {
+    }
+
+    @media (min-width: 1400px) {
+      #index-about-img-container img:first-child {
         margin-top: -24%;
         margin-left: -10%;
         width: 100%;
       }
+
       #index-about-img-container img:nth-child(2) {
         margin-top: -10%;
         width: 90%;
@@ -191,6 +233,7 @@
         transform: translateX(-50%);
         z-index: 2;
       }
+
       #index-about-img-container img:last-child {
         /* margin-top: -20%; */
         margin-top: 16%;
@@ -198,242 +241,297 @@
         z-index: 3;
         width: 56%;
       }
-      }
+    }
 
+    #index-about-min-height {
+      min-height: 200px;
+    }
+
+    @media (min-width: 576px) {
       #index-about-min-height {
-        min-height: 200px;
+        min-height: 300px;
+      }
+    }
+
+    .cloud-animation-1 {
+      animation: cloud-animation-1 5s linear infinite;
+    }
+
+    .cloud-animation-2 {
+      animation: cloud-animation-2 3.5s linear infinite;
+    }
+
+    @keyframes cloud-animation-1 {
+      0% {
+        left: 0;
       }
 
-      @media (min-width: 576px) {
-        #index-about-min-height {
-          min-height: 300px;
-        }
+      50% {
+        left: -10%;
       }
 
-      .cloud-animation-1 {
-        animation: cloud-animation-1 5s linear infinite;
+      100% {
+        left: 0;
       }
-      .cloud-animation-2 {
-        animation: cloud-animation-2 3.5s linear infinite;
+    }
+
+    @keyframes cloud-animation-2 {
+      0% {
+        right: 0;
       }
-      @keyframes cloud-animation-1 {
-        0% {
-          left: 0;
-        }
-        50% {
-          left: -10%;
-        }
-        100% {
-          left: 0;
-        }
+
+      50% {
+        right: -10%;
       }
-      @keyframes cloud-animation-2 {
-        0% {
-          right: 0;
-        }
-        50% {
-          right: -10%;
-        }
-        100% {
-          right: 0;
-        }
+
+      100% {
+        right: 0;
       }
-      /* Index About CSS End */
-    </style>
-  </head>
-  <body>
-    <nav id="navbar" class="d-flex align-items-center">
-      <div class="w-100 h-100 background-dark d-flex">
-        <div class="container d-flex">
-          <div id="navbar-images" class="d-flex align-items-center">
-            <a href="">
-              <img
-                src="./stylesheet/img/nav-logo.png"
-                alt=""
-                id="header-logo"
-                class="img-fluid"
-              />
-            </a>
-            <img
-              src="./stylesheet/icons/hamburger-menu.svg"
-              alt=""
-              class="ml-auto d-lg-none"
-              id="hamburger-menu"
-            />
-          </div>
-          <div
-            id="navigations"
-            class="
+    }
+    /* Index About CSS End */
+
+    /* Index IHA Education Cards CSS Start */
+    #index-iha-educations > img {
+      /* width: 100%; */
+    }
+    .index-iha-cards-container {
+      border: 1px solid var(--line-primary);
+      /* border-radius: 27px; */
+      border-radius: 13%;
+      transition: .3s;
+    }
+    .iha-cards-calendar {
+      width: 22px;
+    }
+    .iha-cards-title {
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--line-primary);
+    }
+    .index-iha-cards-container:hover {
+      box-shadow: 0px 1px 19px 3px rgba(0,0,0,0.1);
+    }
+    /* Index IHA Education Cards CSS End */
+  </style>
+</head>
+
+<body>
+  <nav id="navbar" class="d-flex align-items-center">
+    <div class="w-100 h-100 background-dark d-flex">
+      <div class="container d-flex">
+        <div id="navbar-images" class="d-flex align-items-center">
+          <a href="">
+            <img src="./stylesheet/img/nav-logo.png" alt="" id="header-logo" class="img-fluid" />
+          </a>
+          <img src="./stylesheet/icons/hamburger-menu.svg" alt="" class="ml-auto d-lg-none" id="hamburger-menu" />
+        </div>
+        <div id="navigations" class="
               d-flex
               ml-auto
               position-lg-static
               flex-column-reverse flex-lg-row
               translateX-100
-            "
-          >
-            <div
-              id="contact-links"
-              class="
+            ">
+          <div id="contact-links" class="
                 d-flex d-lg-none
                 justify-content-center
                 flex-column
                 my-auto
                 yellow-bg
-              "
-            >
-              <div
-                id="social-media-links"
-                class="d-flex justify-content-center"
-              >
-                <a href="" class="mx-1"
-                  ><img src="./stylesheet/icons/facebook.svg" alt=""
-                /></a>
-                <a href="" class="mx-1"
-                  ><img src="./stylesheet/icons/instagram.svg" alt=""
-                /></a>
-                <a href="" class="mx-1"
-                  ><img src="./stylesheet/icons/youtube.svg" alt=""
-                /></a>
-              </div>
-              <a
-                href="tel:+908505328797"
-                class="mx-auto my-2 white-text d-flex align-items-center"
-              >
-                <img src="./stylesheet/icons/phone.svg" alt="" class="mr-1" />
-                0850 532 87 97</a
-              >
+              ">
+            <div id="social-media-links" class="d-flex justify-content-center">
+              <a href="" class="mx-1"><img src="./stylesheet/icons/facebook.svg" alt="" /></a>
+              <a href="" class="mx-1"><img src="./stylesheet/icons/instagram.svg" alt="" /></a>
+              <a href="" class="mx-1"><img src="./stylesheet/icons/youtube.svg" alt="" /></a>
             </div>
-            <ul
-              class="
+            <a href="tel:+908505328797" class="mx-auto my-2 white-text d-flex align-items-center">
+              <img src="./stylesheet/icons/phone.svg" alt="" class="mr-1" />
+              0850 532 87 97</a>
+          </div>
+          <ul class="
                 white-text
                 fs-20-mobile fs-16-tablet
                 py-lg-0
                 my-lg-auto
                 py-1
-              "
-            >
-              <li><a href="" class="mx-0-5">HAKKIMIZDA</a></li>
-              <li><a href="" class="mx-0-5">EĞİTİMLERİMİZ</a></li>
-              <li><a href="" class="mx-0-5">AKADEMİK KADRO</a></li>
-              <li><a href="" class="mx-0-5">S.S.S</a></li>
-              <li><a href="" class="mx-0-5">İLETİŞİM</a></li>
+              ">
+            <li><a href="" class="mx-0-5">HAKKIMIZDA</a></li>
+            <li><a href="" class="mx-0-5">EĞİTİMLERİMİZ</a></li>
+            <li><a href="" class="mx-0-5">AKADEMİK KADRO</a></li>
+            <li><a href="" class="mx-0-5">S.S.S</a></li>
+            <li><a href="" class="mx-0-5">İLETİŞİM</a></li>
+          </ul>
+          <form id="search-box" class="my-lg-auto mx-lg-1 m-0" role="search" method="get"
+            action="https://akademi.dronmarket.com/">
+            <label class="position-relative">
+              <input id="search" type="search" placeholder=" Arama" class="py-lg-0-5 py-1 white-text" />
+              <span id="search-icon" class="my-auto position-absolute"></span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <header class="position-relative">
+      <img src="./stylesheet/img/index-header.png" alt="" />
+      <div class="container position-absolute w-100 h-100 right-0 left-0 top-0">
+        <div id="index-header-content" class="position-absolute container">
+          <h1 class="bold primary-text fs-50 pb-1">Dronmarket Akademi</h1>
+          <p class="primary-text mb-2">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt
+            harum commodi cupiditate consequatur iusto accusantium animi,
+            laudantium asperiores praesentium quam?
+          </p>
+          <div id="index-header-buttons-container">
+            <div class="d-flex d-md-inline-block justify-content-around">
+              <a href="" class="primary-btn mb-1 mb-xl-0">İHA-0</a>
+              <a href="" class="primary-btn ml-0 ml-md-1">İHA-1</a>
+            </div>
+            <div class="d-flex d-md-inline-block justify-content-around">
+              <a href="" class="primary-btn mx-xl-1">Belge Sorgulama</a>
+              <a href="" class="primary-btn ml-0 ml-md-1 ml-xl-0">Eğitim Talebi</a>
+            </div>
+          </div>
+        </div>
+        <img src="./stylesheet/img/index-header-drone.png" alt="" id="index-header-drone" class="drone-animation" />
+      </div>
+    </header>
+    <section id="index-about-us" class="container">
+      <div class="row mt-lg-5 mb-lg-5 mt-3 mb-3 flex-lg-row flex-column">
+        <div class="col-lg-6 col-12 p-3">
+          <div id="index-about-min-height" class="yellow-bg">
+            <div id="index-about-img-container" class="position-relative">
+              <img src="./stylesheet/img/cloud-1.png" alt="" class="position-absolute cloud-animation-1">
+              <img src="./stylesheet/img/index-about-drone.png" alt="" class="position-absolute">
+              <img src="./stylesheet/img/cloud-2.png" alt="" class="position-absolute cloud-animation-2">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12 pl-lg-1">
+          <h2 class="d-inline-block title-border-bottom bold primary-text fs-24-mobile">Hakkımızda</h2>
+          <p class="py-1-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptatibus optio eum
+            quisquam, possimus reiciendis voluptates omnis eveniet, iusto cupiditate explicabo fugit cumque distinctio
+            ad sed velit qui quo excepturi quibusdam nesciunt soluta nostrum! Mollitia laboriosam, laudantium debitis
+            unde animi ex illum sed cumque aspernatur iste pariatur et facilis aliquam ducimus excepturi dicta tempora
+            maiores recusandae eum odit dolore, perferendis quam minima! Magni pariatur officiis aliquid provident
+            nostrum numquam ad odit fugiat harum illum ut error aspernatur quo voluptatum, cumque rem sint fuga, porro,
+            exercitationem natus accusantium? Quibusdam ab animi autem, pariatur maxime cumque ipsum rerum nam non
+            perferendis est.</p>
+          <a href="" class="primary-btn">Devamı</a>
+        </div>
+      </div>
+    </section>
+    <section id="index-iha-educations" class="container mt-5 mb-5">
+      <h2 class="d-inline-block mb-3 title-border-bottom bold primary-text fs-20-mobile">Aktif İHA Eğitimleri</h2>
+      <div class="row g-0 glider-remove">
+        <div class="col-12 col-lg-3 d-flex flex-column px-1">
+          <div class="index-iha-cards-container pb-2">
+            <img src="./stylesheet/img/index-iha-cards-1.png" alt="" class="img-fluid w-100">
+            <div class="iha-cards-content px-1-5">
+              <p class="pt-1 d-flex fs-15-mobile secondary-text"><img src="./stylesheet/icons/calendar.svg" alt="" class="mr-0-5 iha-cards-calendar"> 12-16 Ekim</p>
+              <p class="bold fs-20-mobile primary-text mt-1 iha-cards-title">İHA-0 Eğitimi</p>
+              <div class="d-flex align-items-center">
+                <p class="d-flex fs-15-mobile secondary-text align-items-center"><img src="./stylesheet/icons/pin-yellow.svg" alt="" class="vertical-align-middle mr-0-5">İstanbul</p>
+                <p class="d-flex fs-15-mobile secondary-text ml-auto align-items-center"><img src="./stylesheet/icons/clock.svg" alt="" class="vertical-align-middle mr-0-5">16 Saat</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3 d-flex flex-column px-1">
+          <div class="index-iha-cards-container pb-2">
+            <img src="./stylesheet/img/index-iha-cards-2.png" alt="" class="img-fluid w-100">
+            <div class="iha-cards-content px-1-5">
+              <p class="pt-1 d-flex fs-15-mobile secondary-text"><img src="./stylesheet/icons/calendar.svg" alt="" class="mr-0-5 iha-cards-calendar"> 12-16 Ekim</p>
+              <p class="bold fs-20-mobile primary-text mt-1 iha-cards-title">İHA-0 Eğitimi</p>
+              <div class="d-flex align-items-center">
+                <p class="d-flex fs-15-mobile secondary-text align-items-center"><img src="./stylesheet/icons/pin-yellow.svg" alt="" class="vertical-align-middle mr-0-5">İstanbul</p>
+                <p class="d-flex fs-15-mobile secondary-text ml-auto align-items-center"><img src="./stylesheet/icons/clock.svg" alt="" class="vertical-align-middle mr-0-5">16 Saat</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3 d-flex flex-column px-1">
+          <div class="index-iha-cards-container pb-2">
+            <img src="./stylesheet/img/index-iha-cards-3.png" alt="" class="img-fluid w-100">
+            <div class="iha-cards-content px-1-5">
+              <p class="pt-1 d-flex fs-15-mobile secondary-text"><img src="./stylesheet/icons/calendar.svg" alt="" class="mr-0-5 iha-cards-calendar"> 12-16 Ekim</p>
+              <p class="bold fs-20-mobile primary-text mt-1 iha-cards-title">İHA-0 Eğitimi</p>
+              <div class="d-flex align-items-center">
+                <p class="d-flex fs-15-mobile secondary-text align-items-center"><img src="./stylesheet/icons/pin-yellow.svg" alt="" class="vertical-align-middle mr-0-5">İstanbul</p>
+                <p class="d-flex fs-15-mobile secondary-text ml-auto align-items-center"><img src="./stylesheet/icons/clock.svg" alt="" class="vertical-align-middle mr-0-5">16 Saat</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3 d-flex flex-column px-1">
+          <div class="index-iha-cards-container pb-2">
+            <img src="./stylesheet/img/index-iha-cards-4.png" alt="" class="img-fluid w-100">
+            <div class="iha-cards-content px-1-5">
+              <p class="pt-1 d-flex fs-15-mobile secondary-text"><img src="./stylesheet/icons/calendar.svg" alt="" class="mr-0-5 iha-cards-calendar"> 12-16 Ekim</p>
+              <p class="bold fs-20-mobile primary-text mt-1 iha-cards-title">İHA-0 Eğitimi</p>
+              <div class="d-flex align-items-center">
+                <p class="d-flex fs-15-mobile secondary-text align-items-center"><img src="./stylesheet/icons/pin-yellow.svg" alt="" class="vertical-align-middle mr-0-5">İstanbul</p>
+                <p class="d-flex fs-15-mobile secondary-text ml-auto align-items-center"><img src="./stylesheet/icons/clock.svg" alt="" class="vertical-align-middle mr-0-5">16 Saat</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div role="tablist" class="dots"></div>
+    </section>
+  </main>
+  <footer>
+    <div class="background-dark white-text pt-3 pb-3">
+      <div class="container">
+        <div class="row g-0 justify-content-center">
+          <div
+            class="col-lg-3 col-12 py-2 py-lg-0 px-md-1 order-last order-lg-first d-flex flex-column align-items-lg-left align-items-center">
+            <img src="./stylesheet/img/nav-logo.png" alt="">
+            <div class="d-flex mt-2">
+              <a href="" class="mr-0-5"><img src="./stylesheet/icons/facebook-light.svg" alt="" /></a>
+              <a href="" class="mx-0-5"><img src="./stylesheet/icons/instagram-light.svg" alt="" /></a>
+              <a href="" class="ml-0-5"><img src="./stylesheet/icons/youtube-light.svg" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-12 py-2 py-lg-0 px-md-1">
+            <span class="fs-20-mobile bold title-border-bottom">Kurumsal</span>
+            <ul>
+              <li><a href="" class="d-inline-block mb-1 mt-1-5">Hakkkımızda</li></a>
+              <li><a href="" class="d-inline-block">Dronmarket</li></a>
+              <li><a href="" class="d-inline-block mt-1">Dronmarket Blog</li></a>
             </ul>
-            <form
-              id="search-box"
-              class="my-lg-auto mx-lg-1 m-0"
-              role="search"
-              method="get"
-              action="https://akademi.dronmarket.com/"
-            >
-              <label class="position-relative">
-                <input
-                  id="search"
-                  type="search"
-                  placeholder=" Arama"
-                  class="py-lg-0-5 py-1 white-text"
-                />
-                <span id="search-icon" class="my-auto position-absolute"></span>
-              </label>
-            </form>
+          </div>
+          <div class="col-lg-3 col-12 py-2 py-lg-0 px-md-1">
+            <span class="fs-20-mobile bold title-border-bottom">Akademi</span>
+            <ul>
+              <li><a href="" class="d-inline-block mb-1 mt-1-5">Eğitim Talebi</li></a>
+              <li><a href="" class="d-inline-block">Belge Sorgulama</li></a>
+              <li><a href="" class="d-inline-block my-1">Eğitimlerimiz</li></a>
+              <li><a href="" class="d-inline-block">Akademik Kadro</li></a>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-12 py-2 py-lg-0 px-md-1">
+            <span class="fs-20-mobile bold title-border-bottom">İletişim</span>
+            <ul>
+              <li><a href="tel:+908505328797" class="d-inline-block mb-1 mt-1-5"><img
+                    src="./stylesheet/icons/phone-yellow.svg" alt="" class="mr-1 vertical-align-middle" />0850 532 87
+                  97</a></li>
+              <li><a href="mailto:destek@dronmarket.com" class="d-inline-block"><img
+                    src="./stylesheet/icons/mail-yellow.svg" alt=""
+                    class="mr-1 vertical-align-middle" />destek@dronmarket.com</a></li>
+              <li><a href="https://g.page/dronmarket?share" target="_blank" class="d-inline-block mt-1"><img
+                    src="./stylesheet/icons/pin-yellow.svg" alt="" class="mr-1 vertical-align-middle" />Hasanpaşa Mh.
+                  Uzunçayır Cad. Yapı İş Merkezi B1 Blok No:25 İstanbul/Kadıköy</a></li>
+            </ul>
           </div>
         </div>
       </div>
-    </nav>
-    <main>
-      <header class="position-relative">
-        <img src="./stylesheet/img/index-header.png" alt="" />
-        <div
-          class="container position-absolute w-100 h-100 right-0 left-0 top-0"
-        >
-          <div id="index-header-content" class="position-absolute container">
-            <h1 class="bold primary-text fs-50 pb-1">Dronmarket Akademi</h1>
-            <p class="primary-text mb-2">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt
-              harum commodi cupiditate consequatur iusto accusantium animi,
-              laudantium asperiores praesentium quam?
-            </p>
-            <div id="index-header-buttons-container">
-              <div class="d-flex d-md-inline-block justify-content-around">
-                <a href="" class="primary-btn mb-1 mb-xl-0">İHA-0</a>
-                <a href="" class="primary-btn ml-0 ml-md-1">İHA-1</a>
-              </div>
-              <div class="d-flex d-md-inline-block justify-content-around">
-                <a href="" class="primary-btn mx-xl-1">Belge Sorgulama</a>
-                <a href="" class="primary-btn ml-0 ml-md-1 ml-xl-0"
-                  >Eğitim Talebi</a
-                >
-              </div>
-            </div>
-          </div>
-          <img
-            src="./stylesheet/img/index-header-drone.png"
-            alt=""
-            id="index-header-drone"
-            class="drone-animation"
-          />
-        </div>
-      </header>
-      <section id="index-about-us" class="container">
-        <div class="row mt-lg-5 mb-lg-5 mt-3 mb-3 flex-lg-row flex-column">  
-          <div class="col-lg-6 col-12 p-3">
-            <div id="index-about-min-height" class="yellow-bg">
-              <div id="index-about-img-container" class="position-relative">
-                <img src="./stylesheet/img/cloud-1.png" alt="" class="position-absolute cloud-animation-1">
-                <img src="./stylesheet/img/index-about-drone.png" alt="" class="position-absolute">
-                <img src="./stylesheet/img/cloud-2.png" alt="" class="position-absolute cloud-animation-2">
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-12 pl-lg-1">
-            <span class="span-title bold primary-text fs-24-mobile">Hakkımızda</span>
-            <p class="py-1-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptatibus optio eum quisquam, possimus reiciendis voluptates omnis eveniet, iusto cupiditate explicabo fugit cumque distinctio ad sed velit qui quo excepturi quibusdam nesciunt soluta nostrum! Mollitia laboriosam, laudantium debitis unde animi ex illum sed cumque aspernatur iste pariatur et facilis aliquam ducimus excepturi dicta tempora maiores recusandae eum odit dolore, perferendis quam minima! Magni pariatur officiis aliquid provident nostrum numquam ad odit fugiat harum illum ut error aspernatur quo voluptatum, cumque rem sint fuga, porro, exercitationem natus accusantium? Quibusdam ab animi autem, pariatur maxime cumque ipsum rerum nam non perferendis est.</p>
-            <a href="" class="primary-btn">Devamı</a>
-          </div>
-        </div>
-        </section>
-    </main>
-    <footer>
-      <div class="background-dark white-text pt-3 pb-3">
-        <div class="container">
-          <div class="row g-0 justify-content-center">
-            <div class="col-lg-3 col-12 py-2 py-lg-0 px-md-1 order-last order-lg-first d-flex flex-column align-items-lg-left align-items-center">
-              <img src="./stylesheet/img/nav-logo.png" alt="">
-              <div class="d-flex mt-2">
-                <a href="" class="mr-0-5"><img src="./stylesheet/icons/facebook-light.svg" alt=""/></a>
-                <a href="" class="mx-0-5"><img src="./stylesheet/icons/instagram-light.svg" alt=""/></a>
-                <a href="" class="ml-0-5"><img src="./stylesheet/icons/youtube-light.svg" alt=""/></a>
-              </div>
-            </div>
-            <div class="col-lg-3 col-12 py-2 py-lg-0 px-md-1">
-              <span class="fs-20-mobile bold span-title">Kurumsal</span>
-              <ul>
-                <li><a href="" class="d-inline-block mb-1 mt-1-5">Hakkkımızda</li></a>
-                <li><a href="" class="d-inline-block">Dronmarket</li></a>
-                <li><a href="" class="d-inline-block mt-1">Dronmarket Blog</li></a>
-              </ul>
-            </div>
-            <div class="col-lg-3 col-12 py-2 py-lg-0 px-md-1">
-              <span class="fs-20-mobile bold span-title">Akademi</span>
-              <ul>
-                <li><a href="" class="d-inline-block mb-1 mt-1-5">Eğitim Talebi</li></a>
-                <li><a href="" class="d-inline-block">Belge Sorgulama</li></a>
-                <li><a href="" class="d-inline-block my-1">Eğitimlerimiz</li></a>
-                <li><a href="" class="d-inline-block">Akademik Kadro</li></a>
-              </ul>
-            </div>
-            <div class="col-lg-3 col-12 py-2 py-lg-0 px-md-1">
-              <span class="fs-20-mobile bold span-title">İletişim</span>
-              <ul>
-                <li><a href="tel:+908505328797" class="d-inline-block mb-1 mt-1-5"><img src="./stylesheet/icons/phone-yellow.svg" alt="" class="mr-1 vertical-align-middle" />0850 532 87 97</a></li>
-                <li><a href="mailto:destek@dronmarket.com" class="d-inline-block"><img src="./stylesheet/icons/mail-yellow.svg" alt="" class="mr-1 vertical-align-middle" />destek@dronmarket.com</a></li>
-                <li><a href="https://g.page/dronmarket?share" target="_blank" class="d-inline-block mt-1"><img src="./stylesheet/icons/pin-yellow.svg" alt="" class="mr-1 vertical-align-middle" />Hasanpaşa Mh. Uzunçayır Cad. Yapı İş Merkezi B1 Blok No:25 İstanbul/Kadıköy</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script src="./stylesheet/js/main.js"></script>
-  </body>
+  <script src="./stylesheet/js/main.js"></script>
+  <script src="./stylesheet/js/glider.min.js"></script>
+</body>
+
 </html>
