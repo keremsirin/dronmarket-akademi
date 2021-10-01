@@ -317,6 +317,24 @@
       box-shadow: 0px 1px 19px 3px rgba(0,0,0,0.1);
     }
     /* Index IHA Education Cards CSS End */
+    
+    /* Index News Blog CSS Start */
+    .index-blog-cards-content-border {
+      border-bottom: 2px solid var(--line-secondary);
+      padding-bottom: .5rem;
+    }
+    .height-40px {
+      height: 40px !important;
+    }
+
+    .news-blog-cards {
+      transition: .3s;
+    }
+
+    .news-blog-cards:hover {
+      filter: drop-shadow(0px 1px 19px rgba(0, 0, 0, 0.1));
+    }
+    /* Index News Blog CSS End */
   </style>
 </head>
 
@@ -484,6 +502,58 @@
         </div>
       </div>
       <div role="tablist" class="dots"></div>
+    </section>
+    <section id="index-video-area">
+      <video poster="./stylesheet/img/index-video-thumbnail.png" muted playsinline class="img-fluid">
+        <source src="./stylesheet/vid/video.mp4" type="video/mp4">
+      </video>
+    </section>
+    <section id="index-news-blog" class="pt-3 pb-5 background-light">
+      <div class="container">
+        <div class="d-flex">
+          <h2 class="d-inline-block title-border-bottom bold primary-text fs-24-mobile">Haberler</h2>
+          <a href="" class="primary-btn ml-auto">Blog</a>
+        </div>
+        <div class="row mt-2 glider-remove">
+          <div class="col-lg-4 col-12 news-blog-cards px-1 d-flex flex-column">
+            <img src="./stylesheet/img/index-blog-1.png" alt="" class="img-fluid">
+            <div class="index-blog-cards-content px-1-5 py-2 white-bg">
+              <p class="d-flex secondary-text fs-15-mobile index-blog-cards-content-border">
+                <span>30 Eylül 2021</span>
+                <span class="ml-auto"><img src="./stylesheet/icons/eye.svg" alt=""> 65</span>
+              </p>
+              <h4 class="bold fs-20-mobile primary-text mt-1">Dronmarket Blog</h4>
+              <p class="pt-1 fs-15-mobile secondary-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi unde, vitae consequuntur non dolorum quia! Assumenda, veritatis.</p>
+              <a href="" class="primary-btn mt-1 height-40px fs-15-mobile">Devamını Oku</a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-12 news-blog-cards px-1 d-flex flex-column">
+            <img src="./stylesheet/img/index-blog-2.png" alt="" class="img-fluid">
+            <div class="index-blog-cards-content px-1-5 py-2 white-bg">
+              <p class="d-flex secondary-text fs-15-mobile index-blog-cards-content-border">
+                <span>30 Eylül 2021</span>
+                <span class="ml-auto"><img src="./stylesheet/icons/eye.svg" alt=""> 65</span>
+              </p>
+              <h4 class="bold fs-20-mobile primary-text mt-1">Dronmarket Blog</h4>
+              <p class="pt-1 fs-15-mobile secondary-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi unde, vitae consequuntur non dolorum quia! Assumenda, veritatis.</p>
+              <a href="" class="primary-btn mt-1 height-40px fs-15-mobile">Devamını Oku</a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-12 news-blog-cards px-1 d-flex flex-column">
+            <img src="./stylesheet/img/index-blog-3.png" alt="" class="img-fluid">
+            <div class="index-blog-cards-content px-1-5 py-2 white-bg">
+              <p class="d-flex secondary-text fs-15-mobile index-blog-cards-content-border">
+                <span>30 Eylül 2021</span>
+                <span class="ml-auto"><img src="./stylesheet/icons/eye.svg" alt=""> 65</span>
+              </p>
+              <h4 class="bold fs-20-mobile primary-text mt-1">Dronmarket Blog</h4>
+              <p class="pt-1 fs-15-mobile secondary-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi unde, vitae consequuntur non dolorum quia! Assumenda, veritatis.</p>
+              <a href="" class="primary-btn mt-1 height-40px fs-15-mobile">Devamını Oku</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div role="tablist" class="dots2"></div>
     </section>
   </main>
   <footer>
