@@ -103,7 +103,7 @@
 }
 
 .fs-15-mobile {
-  font-size: 15px;
+  font-size: 15px !important;
 }
 
 .fs-16-mobile {
@@ -9130,6 +9130,25 @@ input[type='search']::-webkit-search-results-decoration {
   margin-top: 4px;
 }
 
+.header-h1-bottom {
+  position: relative;
+}
+
+.header-h1-bottom::after {
+  content: '';
+  border-bottom: 10px solid var(--yellow);
+  width: 50%;
+  display: block;
+  position: absolute;
+  margin-top: 4px;
+  left: 50%;
+    transform: translateX(-50%);
+}
+
 .dots.glider-dots {
+  margin-top: 2rem;
+}
+
+.dots2.glider-dots {
   margin-top: 2rem;
 }
