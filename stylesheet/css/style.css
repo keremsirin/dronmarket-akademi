@@ -9170,7 +9170,7 @@ input[type='search']::-webkit-search-results-decoration {
   position: absolute;
   margin-top: 4px;
   left: 50%;
-    transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .dots.glider-dots {
@@ -9178,5 +9178,9 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .dots2.glider-dots {
+  margin-top: 2rem;
+}
+
+.dots3.glider-dots {
   margin-top: 2rem;
 }
