@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +9,12 @@
   <link rel="stylesheet" href="./stylesheet/css/style.css" />
   <link rel="stylesheet" href="./stylesheet/css/glider.min.css">
   <style>
-    header > img {
+    header>img {
       height: calc(50vh - 40px);
       object-fit: cover;
       width: 100%;
     }
-    
+
     #about-img-container img:first-child {
       margin-top: -24%;
       margin-left: -10%;
@@ -142,8 +143,127 @@
         min-height: 300px;
       }
     }
+
+    /* Our Brands Section CSS Start */
+    #brand-1,
+    #brand-2,
+    #brand-3,
+    #brand-4,
+    #brand-5,
+    #brand-6,
+    #brand-7,
+    #brand-8 {
+      width: 150px;
+      height: 150px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    
+    @media (min-width: 992px) {
+      #brand-1,
+      #brand-2,
+      #brand-3,
+      #brand-4,
+      #brand-5,
+      #brand-6,
+      #brand-7,
+      #brand-8 {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    #brand-1 {
+      background-image: url('./stylesheet/img/referanslar/siyah/afad.png');
+    }
+
+    #brand-1:hover {
+      background-image: url('./stylesheet/img/referanslar/renkli/afad.png');
+    }
+
+    #brand-2 {
+      background-image: url('./stylesheet/img/referanslar/siyah/arcelik.png');
+    }
+
+    #brand-2:hover {
+      background-image: url('./stylesheet/img/referanslar/renkli/arcelik.png');
+    }
+
+    #brand-3 {
+      background-image: url('./stylesheet/img/referanslar/siyah/aselsan.png');
+    }
+
+    #brand-3:hover {
+      background-image: url('./stylesheet/img/referanslar/renkli/aselsan.png');
+    }
+
+    #brand-4 {
+      background-image: url('./stylesheet/img/referanslar/siyah/trt.png');
+    }
+
+    #brand-4:hover {
+      background-image: url('./stylesheet/img/referanslar/renkli/trt.png');
+    }
+
+    #brand-5 {
+      background-image: url('./stylesheet/img/referanslar/siyah/hava.png');
+    }
+
+    #brand-5:hover {
+      background-image: url('./stylesheet/img/referanslar/renkli/hava.png');
+    }
+
+    #brand-6 {
+      background-image: url('./stylesheet/img/referanslar/siyah/turkcell.png');
+    }
+
+    #brand-6:hover {
+      background-image: url('./stylesheet/img/referanslar/renkli/turkcell.png');
+    }
+
+    #brand-7 {
+      background-image: url('./stylesheet/img/referanslar/siyah/enerjisa.png');
+    }
+
+    #brand-7:hover {
+      background-image: url('./stylesheet/img/referanslar/renkli/enerjisa.png');
+    }
+
+    #brand-8 {
+      background-image: url('./stylesheet/img/referanslar/siyah/bakanlik.png');
+    }
+
+    #brand-8:hover {
+      background-image: url('./stylesheet/img/referanslar/renkli/bakanlik.png');
+    }
+
+    .primary-btn {
+      width: 180px;
+    }
+
+    #our-brands h2 {
+      display: inline-block;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    #our-brands h2::after {
+      content: '';
+      border-bottom: 3px solid var(--yellow);
+      width: 50%;
+      display: block;
+      position: absolute;
+      margin-top: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* Our Brands Section CSS End */
   </style>
 </head>
+
 <body>
   <nav id="navbar" class="d-flex align-items-center">
     <div class="w-100 h-100 background-dark d-flex">
@@ -201,12 +321,12 @@
       </div>
     </div>
   </nav>
-   <main>
-     <header class="position-relative">
+  <main>
+    <header class="position-relative">
       <img src="./stylesheet/img/about-us-header.png" alt="" class="d-block">
       <h1 class="position-absolute white-text abs-center fs-50 header-h1-bottom bold">Hakkımızda</h1>
-     </header>
-     <section id="about-us" class="container">
+    </header>
+    <section id="about-us" class="container">
       <div class="row mt-lg-5 mb-lg-5 mt-3 mb-3 flex-lg-row flex-column">
         <div class="col-lg-6 col-12 p-3">
           <div id="about-min-height" class="yellow-bg">
@@ -219,7 +339,8 @@
         </div>
         <div class="col-lg-6 col-12 pl-lg-1 mt-lg-0 mt-2 d-flex justify-content-center flex-column">
           <h2 class="d-inline-block title-border-bottom bold primary-text fs-24-mobile mr-auto">Başlık</h2>
-          <p class="py-1-5 secondary-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptatibus optio eum
+          <p class="py-1-5 secondary-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit
+            voluptatibus optio eum
             quisquam, possimus reiciendis voluptates omnis eveniet, iusto cupiditate explicabo fugit cumque distinctio
             ad sed velit qui quo excepturi quibusdam nesciunt soluta nostrum! Mollitia laboriosam, laudantium debitis
             unde animi ex illum sed cumque aspernatur iste pariatur et facilis aliquam ducimus excepturi dicta tempora
@@ -239,7 +360,8 @@
         </div>
         <div class="col-lg-6 col-12 pl-lg-1 mt-lg-0 mt-2 d-flex justify-content-center flex-column">
           <h2 class="d-inline-block title-border-bottom bold primary-text fs-24-mobile mr-auto">Başlık</h2>
-          <p class="py-1-5 secondary-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptatibus optio eum
+          <p class="py-1-5 secondary-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit
+            voluptatibus optio eum
             quisquam, possimus reiciendis voluptates omnis eveniet, iusto cupiditate explicabo fugit cumque distinctio
             ad sed velit qui quo excepturi quibusdam nesciunt soluta nostrum! Mollitia laboriosam, laudantium debitis
             unde animi ex illum sed cumque aspernatur iste pariatur et facilis aliquam ducimus excepturi dicta tempora
@@ -250,8 +372,43 @@
         </div>
       </div>
     </section>
-   </main>
-   <footer>
+    <section id="our-brands" class="background-light pb-5 pt-3">
+      <div class="container">
+        <h2 class="text-center bold primary-text">Referanslarımız</h2>
+        <div class="row g-0 glider-remove-brands">
+          <div class="col-lg-3 col-12">
+            <div id="brand-1"></div>
+          </div>
+          <div class="col-lg-3 col-12">
+            <div id="brand-2"></div>
+          </div>
+          <div class="col-lg-3 col-12">
+            <div id="brand-3"></div>
+          </div>
+          <div class="col-lg-3 col-12">
+            <div id="brand-4"></div>
+          </div>
+          <div class="col-lg-3 col-12">
+            <div id="brand-5"></div>
+          </div>
+          <div class="col-lg-3 col-12">
+            <div id="brand-6"></div>
+          </div>
+          <div class="col-lg-3 col-12">
+            <div id="brand-7"></div>
+          </div>
+          <div class="col-lg-3 col-12">
+            <div id="brand-8"></div>
+          </div>
+        </div>
+        <div role="tablist" class="dots3"></div>
+        <div class="d-flex justify-content-center mt-3">
+          <a href="" class="primary-btn">Tüm Referanslarımız</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
     <div class="background-dark white-text pt-3 pb-3">
       <div class="container">
         <div class="row g-0 justify-content-center">
@@ -299,7 +456,8 @@
       </div>
     </div>
   </footer>
-  <script src="./stylesheet/js/main.js"></script>
   <script src="./stylesheet/js/glider.min.js"></script>
+  <script src="./stylesheet/js/main.js"></script>
 </body>
+
 </html>
