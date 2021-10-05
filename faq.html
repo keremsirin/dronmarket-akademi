@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sıkça Sorulan Sorular</title>
+  <link rel="stylesheet" href="./stylesheet/css/style.css" />
+  <style>
+    header>img {
+      height: calc(50vh - 40px);
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .faq-list {
+      display: none;
+    }
+
+    .faq-logo-container {
+      display: none;
+    }
+
+    b {
+      position: relative;
+      display: block;
+    }
+
+    b::after {
+      content: '';
+      position: absolute;
+      right: 4px;
+      top: 0.5rem;
+      border: solid var(--yellow);
+      border-width: 0 4px 4px 0;
+      display: inline-block;
+      padding: 7px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transition: all 0.3s;
+    }
+
+    .collapsible.active b::after {
+      transform: rotate(-180deg) !important;
+      -webkit-transform: rotate(-180deg) !important;
+      transition: all 0.3s;
+      top: calc(0.5rem + 10px);
+    }
+
+    .active {
+      transition: 0.2s;
+    }
+
+    .active b::after {
+      border: solid var(--yellow);
+      border-width: 0 4px 4px 0;
+      padding: 0 10px 0 10px;
+    }
+
+    .border-radius-20-top {
+      border-radius: 20px 20px 0 0;
+    }
+
+    .border-radius-20-bottom {
+      border-radius: 0 0 20px 20px;
+    }
+
+    @media (min-width: 992px) {
+      .border-radius-20-top {
+        border-radius: 20px;
+      }
+
+      .border-radius-20-bottom {
+        border-radius: 20px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .faq-border-top-mobile {
+        border-top: 1px solid var(--line-secondary);
+      }
+    }
+
+    .faq-border-top {
+      border-top: 1px solid var(--line-secondary);
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="navbar" class="d-flex align-items-center">
+    <div class="w-100 h-100 background-dark d-flex">
+      <div class="container d-flex">
+        <div id="navbar-images" class="d-flex align-items-center">
+          <a href="">
+            <img src="./stylesheet/img/nav-logo.png" alt="" id="header-logo" class="img-fluid" />
+          </a>
+          <img src="./stylesheet/icons/hamburger-menu.svg" alt="" class="ml-auto d-lg-none" id="hamburger-menu" />
+        </div>
+        <div id="navigations" class="
+              d-flex
+              ml-auto
+              position-lg-static
+              flex-column-reverse flex-lg-row
+              translateX-100
+            ">
+          <div id="contact-links" class="
+                d-flex d-lg-none
+                justify-content-center
+                flex-column
+                my-auto
+                yellow-bg
+              ">
+            <div id="social-media-links" class="d-flex justify-content-center">
+              <a href="" class="mx-1"><img src="./stylesheet/icons/facebook.svg" alt="" /></a>
+              <a href="" class="mx-1"><img src="./stylesheet/icons/instagram.svg" alt="" /></a>
+              <a href="" class="mx-1"><img src="./stylesheet/icons/youtube.svg" alt="" /></a>
+            </div>
+            <a href="tel:+908505328797" class="mx-auto my-2 white-text d-flex align-items-center">
+              <img src="./stylesheet/icons/phone.svg" alt="" class="mr-1" />
+              0850 532 87 97</a>
+          </div>
+          <ul class="
+                white-text
+                fs-20-mobile fs-16-tablet
+                py-lg-0
+                my-lg-auto
+                py-1
+              ">
+            <li><a href="" class="mx-0-5">HAKKIMIZDA</a></li>
+            <li><a href="" class="mx-0-5">EĞİTİMLERİMİZ</a></li>
+            <li><a href="" class="mx-0-5">AKADEMİK KADRO</a></li>
+            <li><a href="" class="mx-0-5">S.S.S</a></li>
+            <li><a href="" class="mx-0-5">İLETİŞİM</a></li>
+          </ul>
+          <form id="search-box" class="my-lg-auto mx-lg-1 m-0" role="search" method="get"
+            action="https://akademi.dronmarket.com/">
+            <label class="position-relative">
+              <input id="search" type="search" placeholder=" Arama" class="py-lg-0-5 py-1 white-text" />
+              <span id="search-icon" class="my-auto position-absolute"></span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <header class="position-relative">
+      <img src="./stylesheet/img/faq-header.png" alt="" class="d-block">
+      <h1 class="position-absolute white-text abs-center fs-50 header-h1-bottom bold text-center">Sıkça Sorulan Sorular
+      </h1>
+    </header>
+    <section id="faq" class="background-light pt-3 pb-5">
+      <div class="container">
+        <div class="row g-0 justify-content-center">
+          <div class="col-lg-6 col-12 pr-lg-1 pr-0">
+            <div class="white-bg border-radius-20-top">
+              <div class="col-12 px-1 pb-0-5 pt-1 collapsible">
+                <b class="py-0-5 primary-text">Lorem ipsum dolor sit amet consectetur elit?</b>
+                <ul class="faq-list mt-0-5">
+                  <li class="secondary-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                    excepturi praesentium, explicabo, tempora iusto minima in fugiat
+                    fugit autem earum quam facere deserunt dolore.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 px-1 py-0-5 collapsible faq-border-top">
+                <b class="py-0-5 primary-text">Lorem ipsum dolor sit amet consectetur elit?</b>
+                <ul class="faq-list mt-0-5">
+                  <li class="secondary-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                    excepturi praesentium, explicabo, tempora iusto minima in fugiat
+                    fugit autem earum quam facere deserunt dolore.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 px-1 py-0-5 collapsible faq-border-top">
+                <b class="py-0-5 primary-text">Lorem ipsum dolor sit amet consectetur elit?</b>
+                <ul class="faq-list mt-0-5">
+                  <li class="secondary-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                    excepturi praesentium, explicabo, tempora iusto minima in fugiat
+                    fugit autem earum quam facere deserunt dolore.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 px-1 py-0-5 collapsible faq-border-top">
+                <b class="py-0-5 primary-text">Lorem ipsum dolor sit amet consectetur elit?</b>
+                <ul class="faq-list mt-0-5">
+                  <li class="secondary-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                    excepturi praesentium, explicabo, tempora iusto minima in fugiat
+                    fugit autem earum quam facere deserunt dolore.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 px-1 pt-0-5 pb-lg-1 pb-0-5 collapsible faq-border-top">
+                <b class="py-0-5 primary-text">Lorem ipsum dolor sit amet consectetur elit?</b>
+                <ul class="faq-list mt-0-5">
+                  <li class="secondary-text mb-1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                    excepturi praesentium, explicabo, tempora iusto minima in fugiat
+                    fugit autem earum quam facere deserunt dolore.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 justify-content-center-mobile pl-lg-1 pl-0">
+            <div class="white-bg border-radius-20-bottom faq-border-top-mobile">
+              <div class="col-12 px-1 pb-0-5 pt-lg-1 pt-0-5 collapsible">
+                <b class="py-0-5 primary-text">Lorem ipsum dolor sit amet consectetur elit?</b>
+                <ul class="faq-list mt-0-5">
+                  <li class="secondary-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                    excepturi praesentium, explicabo, tempora iusto minima in fugiat
+                    fugit autem earum quam facere deserunt dolore.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 px-1 py-0-5 collapsible faq-border-top">
+                <b class="py-0-5 primary-text">Lorem ipsum dolor sit amet consectetur elit?</b>
+                <ul class="faq-list mt-0-5">
+                  <li class="secondary-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                    excepturi praesentium, explicabo, tempora iusto minima in fugiat
+                    fugit autem earum quam facere deserunt dolore.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 px-1 py-0-5 collapsible faq-border-top">
+                <b class="py-0-5 primary-text">Lorem ipsum dolor sit amet consectetur elit?</b>
+                <ul class="faq-list mt-0-5">
+                  <li class="secondary-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                    excepturi praesentium, explicabo, tempora iusto minima in fugiat
+                    fugit autem earum quam facere deserunt dolore.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 px-1 py-0-5 collapsible faq-border-top">
+                <b class="py-0-5 primary-text">Lorem ipsum dolor sit amet consectetur elit?</b>
+                <ul class="faq-list mt-0-5">
+                  <li class="secondary-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                    excepturi praesentium, explicabo, tempora iusto minima in fugiat
+                    fugit autem earum quam facere deserunt dolore.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 px-1 pt-0-5 pb-1 collapsible faq-border-top">
+                <b class="py-0-5 primary-text">Lorem ipsum dolor sit amet consectetur elit?</b>
+                <ul class="faq-list mt-0-5">
+                  <li class="secondary-text mb-1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                    excepturi praesentium, explicabo, tempora iusto minima in fugiat
+                    fugit autem earum quam facere deserunt dolore.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="background-dark white-text pt-3 pb-3">
+      <div class="container">
+        <div class="row g-0 justify-content-center">
+          <div
+            class="col-lg-3 col-12 py-2 py-lg-0 px-md-1 order-last order-lg-first d-flex flex-column align-items-lg-left align-items-center">
+            <img src="./stylesheet/img/nav-logo.png" alt="">
+            <div class="d-flex mt-2">
+              <a href="" class="mr-0-5"><img src="./stylesheet/icons/facebook-light.svg" alt="" /></a>
+              <a href="" class="mx-0-5"><img src="./stylesheet/icons/instagram-light.svg" alt="" /></a>
+              <a href="" class="ml-0-5"><img src="./stylesheet/icons/youtube-light.svg" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-12 py-2 py-lg-0 px-md-1">
+            <span class="fs-20-mobile bold title-border-bottom">Kurumsal</span>
+            <ul>
+              <li><a href="" class="d-inline-block mb-1 mt-1-5">Hakkkımızda</li></a>
+              <li><a href="" class="d-inline-block">Dronmarket</li></a>
+              <li><a href="" class="d-inline-block mt-1">Dronmarket Blog</li></a>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-12 py-2 py-lg-0 px-md-1">
+            <span class="fs-20-mobile bold title-border-bottom">Akademi</span>
+            <ul>
+              <li><a href="" class="d-inline-block mb-1 mt-1-5">Eğitim Talebi</li></a>
+              <li><a href="" class="d-inline-block">Belge Sorgulama</li></a>
+              <li><a href="" class="d-inline-block my-1">Eğitimlerimiz</li></a>
+              <li><a href="" class="d-inline-block">Akademik Kadro</li></a>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-12 py-2 py-lg-0 px-md-1">
+            <span class="fs-20-mobile bold title-border-bottom">İletişim</span>
+            <ul>
+              <li><a href="tel:+908505328797" class="d-inline-block mb-1 mt-1-5"><img
+                    src="./stylesheet/icons/phone-yellow.svg" alt="" class="mr-1 vertical-align-middle" />0850 532 87
+                  97</a></li>
+              <li><a href="mailto:destek@dronmarket.com" class="d-inline-block"><img
+                    src="./stylesheet/icons/mail-yellow.svg" alt=""
+                    class="mr-1 vertical-align-middle" />destek@dronmarket.com</a></li>
+              <li><a href="https://g.page/dronmarket?share" target="_blank" class="d-inline-block mt-1"><img
+                    src="./stylesheet/icons/pin-yellow.svg" alt="" class="mr-1 vertical-align-middle" />Hasanpaşa Mh.
+                  Uzunçayır Cad. Yapı İş Merkezi B1 Blok No:25 İstanbul/Kadıköy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>
+    $('.collapsible').click(function () {
+      $(this).find('.faq-list').slideToggle()
+      $(this).toggleClass('active')
+    })
+  </script>
+</body>
+
+</html>
