@@ -102,6 +102,10 @@
   color: var(--white);
 }
 
+.fs-14-mobile {
+  font-size: 14px !important;
+}
+
 .fs-15-mobile {
   font-size: 15px !important;
 }
