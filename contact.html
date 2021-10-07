@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İletişim</title>
+  <link rel="stylesheet" href="./stylesheet/css/style.css" />
+  <style>
+    .contact-img {
+      height: calc(80vh - 80px);
+    }
+
+    .contact-img::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: calc(80vh - 80px);
+      left: 0;
+      top: 80px;
+      background: url(./stylesheet/img/contact-background.png) no-repeat center;
+      background-size: cover;
+      z-index: -1;
+    }
+
+    #contact-container {
+      background-color: rgba(240, 240, 240, 0.4);
+      border-radius: 20px;
+    }
+
+    @media (min-width: 992px) {
+      .contact-img {
+        min-height: calc(100vh - 90px);
+        height: auto;
+      }
+
+      .contact-img::before {
+        top: 90px;
+        width: 50%;
+        min-height: calc(100vh - 90px);
+        height: 100%;
+      }
+    }
+
+    #contact-us-form {
+      width: 100%;
+    }
+
+    #input-container {
+      flex-wrap: wrap;
+    }
+
+    #contact-us-form input, textarea {
+      border: 1px solid var(--line-primary);
+      border-radius: 10px;
+      height: 50px;
+      margin-top: .5rem;
+      margin-bottom: 1rem;
+      padding-left: 1rem;
+      flex: 0 0 100%; 
+    }
+    
+    #contact-us-form input:last-of-type {
+      flex-basis: 20%;
+    }
+    #contact-us-form button {
+      flex-basis: 50%;
+    }
+
+    #contact-us-form textarea {
+      height: 120px;
+      outline: none;
+      resize: none;
+      padding-top: 1rem;
+      padding-right: 1rem;
+    }
+
+    #contact-us-form input:last-of-type {
+      height: 50px;
+      border: 0;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="navbar" class="d-flex align-items-center">
+    <div class="w-100 h-100 background-dark d-flex">
+      <div class="container d-flex">
+        <div id="navbar-images" class="d-flex align-items-center">
+          <a href="">
+            <img src="./stylesheet/img/nav-logo.png" alt="" id="header-logo" class="img-fluid" />
+          </a>
+          <img src="./stylesheet/icons/hamburger-menu.svg" alt="" class="ml-auto d-lg-none" id="hamburger-menu" />
+        </div>
+        <div id="navigations" class="
+              d-flex
+              ml-auto
+              position-lg-static
+              flex-column-reverse flex-lg-row
+              translateX-100
+            ">
+          <div id="contact-links" class="
+                d-flex d-lg-none
+                justify-content-center
+                flex-column
+                my-auto
+                yellow-bg
+              ">
+            <div id="social-media-links" class="d-flex justify-content-center">
+              <a href="" class="mx-1"><img src="./stylesheet/icons/facebook.svg" alt="" /></a>
+              <a href="" class="mx-1"><img src="./stylesheet/icons/instagram.svg" alt="" /></a>
+              <a href="" class="mx-1"><img src="./stylesheet/icons/youtube.svg" alt="" /></a>
+            </div>
+            <a href="tel:+908505328797" class="mx-auto my-2 white-text d-flex align-items-center">
+              <img src="./stylesheet/icons/phone.svg" alt="" class="mr-1" />
+              0850 532 87 97</a>
+          </div>
+          <ul class="
+                white-text
+                fs-20-mobile fs-16-tablet
+                py-lg-0
+                my-lg-auto
+                py-1
+              ">
+            <li><a href="" class="mx-0-5">HAKKIMIZDA</a></li>
+            <li><a href="" class="mx-0-5">EĞİTİMLERİMİZ</a></li>
+            <li><a href="" class="mx-0-5">AKADEMİK KADRO</a></li>
+            <li><a href="" class="mx-0-5">S.S.S</a></li>
+            <li><a href="" class="mx-0-5">İLETİŞİM</a></li>
+          </ul>
+          <form id="search-box" class="my-lg-auto mx-lg-1 m-0" role="search" method="get"
+            action="https://akademi.dronmarket.com/">
+            <label class="position-relative">
+              <input id="search" type="search" placeholder=" Arama" class="py-lg-0-5 py-1 white-text" />
+              <span id="search-icon" class="my-auto position-absolute"></span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <!-- <div class="row g-0">
+      <div class="col-lg-6 col-12">
+        <img src="./stylesheet/img/contact-background.png" alt="" id="contact-background" class="d-block">
+      </div>
+      <div class="col-lg-6 col-12">deneme</div>
+    </div> -->
+    <div class="container">
+      <div class="row g-0">
+        <div class="col-lg-6 col-12 contact-img p-0 p-lg-5">
+          <div id="contact-container" class="position-relative abs-center p-3 p-lg-4">
+            <h1 class="d-inline-block primary-text bold header-h1-bottom pb-3">İletişim</h1>
+            <ul class="secondary-text">
+              <li><a href="tel:+908505328797" class="d-inline-block mb-2"><img src="./stylesheet/icons/phone-yellow.svg"
+                    alt="" class="mr-1 vertical-align-middle" />0850 532 87
+                  97</a></li>
+              <li><a href="mailto:destek@dronmarket.com" class="d-inline-block"><img
+                    src="./stylesheet/icons/mail-yellow.svg" alt=""
+                    class="mr-1 vertical-align-middle" />destek@dronmarket.com</a></li>
+              <li><a href="https://g.page/dronmarket?share" target="_blank" class="d-inline-block mt-2"><img
+                    src="./stylesheet/icons/pin-yellow.svg" alt="" class="mr-1 vertical-align-middle" />Hasanpaşa Mh.
+                  Uzunçayır Cad. Yapı İş Merkezi B1 Blok No:25 İstanbul/Kadıköy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12 d-flex flex-column justify-content-center align-items-center p-0 p-lg-5 mt-3 mb-5 mt-lg-0 mb-lg-0">
+          <h2 class="title-border-bottom bold primary-text mr-auto px-lg-3 px-0">Bize Ulaşın</h2>
+          <form id="contact-us-form" class="px-lg-3 px-0" action=”mailto:destek@dronmarket.com” method=”POST” enctype=”multipart/form-data”
+            name=”EmailForm”>
+            <div id="input-container" class="d-flex mt-2 primary-text">
+              <label for="name">Ad Soyad</label>
+              <input type="text" id="name" name="name">
+              <label for="email">E-posta</label>
+              <input type="email" id="email" name="email">
+              <label for="tel">Telefon</label>
+              <input type="tel" id="tel" name="tel">
+              <label for="message">Mesaj</label>
+              <textarea id="message" name="message"></textarea>
+              <input type="reset" value="İptal" class="ml-auto my-0 pl-0 mt-1 mr-1">
+              <button type="submit" form="contact-us-form" value="Submit" class="primary-btn mt-1">Gönder</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="background-dark white-text pt-3 pb-3">
+      <div class="container">
+        <div class="row g-0 justify-content-center">
+          <div
+            class="col-lg-3 col-12 py-2 py-lg-0 px-md-1 order-last order-lg-first d-flex flex-column align-items-lg-left align-items-center">
+            <img src="./stylesheet/img/nav-logo.png" alt="">
+            <div class="d-flex mt-2">
+              <a href="" class="mr-0-5"><img src="./stylesheet/icons/facebook-light.svg" alt="" /></a>
+              <a href="" class="mx-0-5"><img src="./stylesheet/icons/instagram-light.svg" alt="" /></a>
+              <a href="" class="ml-0-5"><img src="./stylesheet/icons/youtube-light.svg" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-12 py-2 py-lg-0 px-md-1">
+            <span class="fs-20-mobile bold title-border-bottom">Kurumsal</span>
+            <ul>
+              <li><a href="" class="d-inline-block mb-1 mt-1-5">Hakkkımızda</li></a>
+              <li><a href="" class="d-inline-block">Dronmarket</li></a>
+              <li><a href="" class="d-inline-block mt-1">Dronmarket Blog</li></a>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-12 py-2 py-lg-0 px-md-1">
+            <span class="fs-20-mobile bold title-border-bottom">Akademi</span>
+            <ul>
+              <li><a href="" class="d-inline-block mb-1 mt-1-5">Eğitim Talebi</li></a>
+              <li><a href="" class="d-inline-block">Belge Sorgulama</li></a>
+              <li><a href="" class="d-inline-block my-1">Eğitimlerimiz</li></a>
+              <li><a href="" class="d-inline-block">Akademik Kadro</li></a>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-12 py-2 py-lg-0 px-md-1">
+            <span class="fs-20-mobile bold title-border-bottom">İletişim</span>
+            <ul>
+              <li><a href="tel:+908505328797" class="d-inline-block mb-1 mt-1-5"><img
+                    src="./stylesheet/icons/phone-yellow.svg" alt="" class="mr-1 vertical-align-middle" />0850 532 87
+                  97</a></li>
+              <li><a href="mailto:destek@dronmarket.com" class="d-inline-block"><img
+                    src="./stylesheet/icons/mail-yellow.svg" alt=""
+                    class="mr-1 vertical-align-middle" />destek@dronmarket.com</a></li>
+              <li><a href="https://g.page/dronmarket?share" target="_blank" class="d-inline-block mt-1"><img
+                    src="./stylesheet/icons/pin-yellow.svg" alt="" class="mr-1 vertical-align-middle" />Hasanpaşa Mh.
+                  Uzunçayır Cad. Yapı İş Merkezi B1 Blok No:25 İstanbul/Kadıköy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="yellow-bg">
+      <p class="text-center white-text py-1">Copyright 2021 © Dronmarket. Tüm Hakları Saklıdır.</p>
+    </div>
+  </footer>
+  <script src="./stylesheet/js/main.js"></script>
+</body>
+
+</html>
