@@ -126,6 +126,10 @@
   font-size: 24px;
 }
 
+.fs-30-mobile {
+  font-size: 30px;
+}
+
 .fs-32-mobile {
   font-size: 32px;
 }
@@ -144,6 +148,10 @@
 
 .fs-50-mobile {
   font-size: 50px;
+}
+
+.fs-80-mobile {
+  font-size: 80px;
 }
 
 @media (min-width: 768px) {
