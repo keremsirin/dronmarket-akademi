@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eğitim Sayfası</title>
+  <link rel="stylesheet" href="./stylesheet/css/style.css" />
+  <style>
+    .education-detail-conatiner {
+      /* height: calc(50vh - 40px); */
+      /* position: relative; */
+    }
+
+    .education-detail-conatiner::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      right: 0;
+      top: unset;
+      bottom: 0;
+      /* background: url(./stylesheet/img/education-request-header.png) no-repeat center; */
+      background-color: transparent;
+      background-size: cover;
+      z-index: -1;
+    }
+
+    @media (min-width: 992px) {
+      .education-detail-conatiner {
+        min-height: calc(100vh - 90px);
+        height: auto;
+      }
+
+      .education-detail-conatiner::before {
+        position: fixed;
+        top: 90px;
+        bottom: unset;
+        width: 50%;
+        min-height: calc(100vh - 90px);
+        background-color: var(--background-light);
+        height: 100%;
+      }
+    }
+
+    #sticky-container {
+      position: sticky;
+      top: calc(3rem + 90px);
+      /* top: calc(50vh - 45px); */
+      /* transform: translateY(calc(-50vh + 45px)); */
+    }
+
+    #education-detail-img {
+      object-fit: cover;
+      max-height: 300px;
+      border-radius: 60px;
+    }
+
+    @media (min-width: 1441px) {
+      #education-detail-img {
+        max-height: 400px;
+      }
+    }
+
+    #education-request-form .title-border-bottom::after {
+      width: 30%;
+      margin-top: .5rem;
+    }
+
+    .educations-border {
+      border-top: 2px solid var(--background-light);
+      border-bottom: 2px solid var(--background-light);
+    }
+
+    #education-detail-form {
+      width: 100%;
+    }
+
+    #input-container {
+      flex-wrap: wrap;
+    }
+
+    #education-detail-form input,
+    textarea {
+      border: 1px solid var(--line-primary);
+      border-radius: 10px;
+      height: 40px;
+      margin-top: .5rem;
+      margin-bottom: .5rem;
+      padding-left: .5rem;
+      padding-right: .5rem;
+      flex: 0 0 100%;
+      color: var(--text-secondary);
+    }
+
+    #education-detail-form select {
+      border: 1px solid var(--line-primary);
+      border-radius: 10px;
+      height: 40px;
+      margin-top: .5rem;
+      margin-bottom: .5rem;
+      padding-left: .5rem;
+      padding-right: .5rem;
+      flex: 0 0 100%;
+      color: var(--text-secondary);
+      width: 100%;
+      display: block;
+    }
+
+    #education-detail-form #identity,
+    #education-detail-form #photo,
+    #education-detail-form #certificate {
+      border: 0;
+      width: 100% !important;
+      padding-left: 0;
+      border-radius: 0;
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
+
+    input[type=file]::file-selector-button {
+      background-color: var(--line-secondary);
+      color: var(--text-secondary);
+      border: 0;
+      padding: .5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    label[for=identity],
+    label[for=photo],
+    label[for=certificate] {
+      min-height: 20px;
+    }
+
+    @media (min-width: 992px) {
+      #header-title {
+        font-size: 50px;
+        line-height: 60px;
+      }
+
+      #education-detail-form input {
+        width: 120px !important;
+      }
+
+      label[for=identity],
+      label[for=photo],
+      label[for=certificate] {
+        min-height: 40px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      #education-detail-form input {
+        width: 100% !important;
+        max-width: 150px;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      #education-detail-form input {
+        max-width: unset;
+      }
+    }
+
+    #education-detail-form textarea {
+      outline: none;
+      resize: none;
+      padding: .5rem;
+      height: 80px;
+    }
+
+    @media (min-width: 992px) {
+      #education-detail-form textarea {
+        height: 40px;
+      }
+    }
+
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-image: url("./stylesheet/icons/down-arrow.svg");
+      background-repeat: no-repeat;
+      background-position-x: 96%;
+      background-position-y: 50%;
+    }
+
+    #reset {
+      height: 50px;
+      border: 0 !important;
+      background-color: transparent;
+      cursor: pointer;
+      flex-basis: 20% !important;
+    }
+
+    .education-flex-basis {
+      flex-basis: 30%;
+    }
+
+    .education-flex-basis-2 {
+      flex-basis: 48%;
+    }
+
+    .education-flex-basis-3 {
+      flex-basis: 100%;
+    }
+
+    #check-container input {
+      height: auto !important;
+      width: auto !important;
+    }
+
+    .border-radius-30 {
+      border-radius: 30px;
+    }
+
+    #sticky-btn-container {
+      position: sticky;
+      bottom: 2rem;
+      justify-content: end;
+    }
+    #sticky-btn-container a {
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="navbar" class="d-flex align-items-center">
+    <div class="w-100 h-100 background-dark d-flex">
+      <div class="container d-flex">
+        <div id="navbar-images" class="d-flex align-items-center">
+          <a href="">
+            <img src="./stylesheet/img/nav-logo.png" alt="" id="header-logo" class="img-fluid" />
+          </a>
+          <img src="./stylesheet/icons/hamburger-menu.svg" alt="" class="ml-auto d-lg-none" id="hamburger-menu" />
+        </div>
+        <div id="navigations" class="
+              d-flex
+              ml-auto
+              position-lg-static
+              flex-column-reverse flex-lg-row
+              translateX-100
+            ">
+          <div id="contact-links" class="
+                d-flex d-lg-none
+                justify-content-center
+                flex-column
+                my-auto
+                yellow-bg
+              ">
+            <div id="social-media-links" class="d-flex justify-content-center">
+              <a href="" class="mx-1"><img src="./stylesheet/icons/facebook.svg" alt="" /></a>
+              <a href="" class="mx-1"><img src="./stylesheet/icons/instagram.svg" alt="" /></a>
+              <a href="" class="mx-1"><img src="./stylesheet/icons/youtube.svg" alt="" /></a>
+            </div>
+            <a href="tel:+908505328797" class="mx-auto my-2 white-text d-flex align-items-center">
+              <img src="./stylesheet/icons/phone.svg" alt="" class="mr-1" />
+              0850 532 87 97</a>
+          </div>
+          <ul class="
+                white-text
+                fs-20-mobile fs-16-tablet
+                py-lg-0
+                my-lg-auto
+                py-1
+              ">
+            <li><a href="" class="mx-0-5">HAKKIMIZDA</a></li>
+            <li><a href="" class="mx-0-5">EĞİTİMLERİMİZ</a></li>
+            <li><a href="" class="mx-0-5">AKADEMİK KADRO</a></li>
+            <li><a href="" class="mx-0-5">S.S.S</a></li>
+            <li><a href="" class="mx-0-5">İLETİŞİM</a></li>
+          </ul>
+          <form id="search-box" class="my-lg-auto mx-lg-1 m-0" role="search" method="get"
+            action="https://akademi.dronmarket.com/">
+            <label class="position-relative">
+              <input id="search" type="search" placeholder=" Arama" class="py-lg-0-5 py-1 white-text" />
+              <span id="search-icon" class="my-auto position-absolute"></span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section id="education-detail" class="container">
+      <div class="row g-0">
+        <div class="col-lg-6 col-12 d-flex flex-column mt-3 pr-lg-3 pr-0">
+          <img src="./stylesheet/img/education-detail.png" alt="" id="education-detail-img" class="img-fluid">
+          <p class="d-flex align-items-center secondary-text mt-2"><img src="./stylesheet/icons/calendar.svg" alt=""
+              class="mr-0-5">12-16 Ağustos</p>
+          <div class="d-flex mt-1-5 align-items-baseline flex-lg-row flex-column">
+            <h1 class="bold primary-text">İHA-0 Eğitimi</h1>
+            <p class="secondary-text ml-lg-auto ml-0 mt-0-5 mt-lg-0">Eğitmen<span class="bold ml-0-5">Eğitmen Adı</span>
+            </p>
+          </div>
+          <div class="d-flex secondary-text justify-content-between align-items-center mt-2 py-2 educations-border">
+            <p class="d-flex align-items-center"><img src="./stylesheet/icons/pin-yellow.svg" alt=""
+                class="mr-0-5">İstanbul</p>
+            <p class="d-flex align-items-center"><img src="./stylesheet/icons/clock.svg" alt="" class="mr-0-5">16 Saat
+            </p>
+            <p class="d-flex align-items-center"><img src="./stylesheet/icons/education-yellow.svg" alt=""
+                class="mr-0-5">İHA-0</p>
+          </div>
+          <h3 class="fs-22-mobile primary-text bold mt-2 mb-1">Eğitim Hakkında</h3>
+          <p class="mb-lg-3 mb-2 secondary-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
+            possimus
+            iste saepe quae sed officia. Minus voluptatibus nihil, eius suscipit architecto odio accusantium illo,
+            numquam voluptatem ullam quod! Suscipit dignissimos amet harum ex debitis odio commodi libero, sint ullam
+            modi repellat, praesentium, vero nemo! Consequatur exercitationem, est voluptatem pariatur ab aperiam, quam
+            fugit ullam suscipit ipsum corporis, cupiditate vitae id voluptatum nihil fuga voluptatibus labore voluptate
+            nisi veniam voluptas neque! Suscipit iusto accusamus repellat blanditiis aperiam, repellendus perspiciatis
+            inventore neque ex officiis minima esse voluptas similique debitis ipsam, iure animi reiciendis, soluta
+            recusandae nostrum ratione explicabo dignissimos ipsum nemo? Accusamus?</p>
+          <h3 class="fs-22-mobile primary-text bold mb-1">Kimler Katılabilir</h3>
+          <p class="mb-3 mb-lg-5 secondary-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
+            possimus
+            iste saepe quae sed officia. Minus voluptatibus nihil, eius suscipit architecto odio accusantium illo,
+            numquam voluptatem ullam quod! Suscipit dignissimos amet harum ex debitis odio commodi libero, sint ullam
+            modi repellat, praesentium, vero nemo! Consequatur exercitationem, est voluptatem pariatur ab aperiam, quam
+            fugit ullam suscipit ipsum corporis, cupiditate vitae id voluptatum nihil fuga voluptatibus labore voluptate
+            nisi veniam voluptas neque! Suscipit iusto accusamus repellat blanditiis aperiam, repellendus perspiciatis
+            inventore neque ex officiis minima esse voluptas similique debitis ipsam, iure animi reiciendis, soluta
+            recusandae nostrum ratione explicabo dignissimos ipsum nemo? Accusamus?</p>
+          <div id="sticky-btn-container">
+            <a href="#sticky-container" class="primary-btn bold d-flex d-lg-none ml-auto">BAŞVUR</a>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12 pl-lg-3 pl-0 education-detail-conatiner mb-5">
+          <div id="sticky-container" class="white-bg border-radius-30 py-0 px-0 py-lg-2 px-lg-1-5">
+            <h2 class="d-inline-block title-border-bottom bold primary-text">Başvur</h2>
+            <form id="education-detail-form" action="mailto:destek@dronmarket.com" method="POST"
+              enctype="multipart/form-data" name="EmailForm">
+              <div id="input-container" class="d-flex mt-3 primary-text">
+                <div class="d-flex justify-content-between flex-lg-row flex-column w-100">
+                  <div class="d-block education-flex-basis">
+                    <label class="d-lg-inline-block d-block secondary-text fs-15-mobile" for="id">T.C. Kimlik No</label>
+                    <input class="w-100" type="text" id="id" name="id">
+                  </div>
+                  <div class="d-block education-flex-basis">
+                    <label class="d-lg-inline-block d-block secondary-text fs-15-mobile" for="name">Ad</label>
+                    <input class="w-100" type="text" id="name" name="name">
+                  </div>
+                  <div class="d-block education-flex-basis">
+                    <label class="d-lg-inline-block d-block secondary-text fs-15-mobile" for="surname">Soyad</label>
+                    <input class="w-100" type="text" id="surname" name="surname">
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between flex-lg-row flex-column w-100">
+                  <div class="d-block education-flex-basis">
+                    <label class="d-lg-inline-block d-block secondary-text fs-15-mobile" for="date">Doğum Yılı</label>
+                    <input class="w-100" type="date" id="date" name="date">
+                  </div>
+                  <div class="d-block education-flex-basis">
+                    <label class="d-lg-inline-block d-block secondary-text fs-15-mobile" for="tel">Telefon</label>
+                    <input class="w-100" type="tel" id="tel" name="tel">
+                  </div>
+                  <div class="d-block education-flex-basis">
+                    <label class="d-lg-inline-block d-block secondary-text fs-15-mobile" for="email">E-Posta</label>
+                    <input class="w-100" type="email" id="email" name="email">
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between w-100">
+                  <div class="d-block education-flex-basis-3">
+                    <label class="d-lg-inline-block d-block secondary-text fs-15-mobile" for="address">Adres</label>
+                    <textarea class="w-100" id="address" name="address"></textarea>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between flex-lg-row flex-column w-100">
+                  <div class="d-block education-flex-basis mt-0-5 mt-lg-0">
+                    <label class="d-lg-inline-block d-block secondary-text fs-15-mobile" for="identity">Kimliğin Ön ve
+                      Arka Kopyası</label>
+                    <input type="file" accept="image/*,.pdf,.docx" id="identity" name="identity">
+                  </div>
+                  <div class="d-block education-flex-basis mt-0-5 mt-lg-0">
+                    <label class="d-lg-inline-block d-block secondary-text fs-15-mobile" for="photo">Vesikalık
+                      Fotoğraf</label>
+                    <input type="file" accept="image/*,.pdf,.docx" id="photo" name="photo">
+                  </div>
+                  <div class="d-block education-flex-basis mt-0-5 mt-lg-0">
+                    <label class="d-lg-inline-block d-block secondary-text fs-15-mobile"
+                      for="certificate">Diploma</label>
+                    <input type="file" accept="image/*,.pdf,.docx" id="certificate" name="certificate">
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between w-100">
+                  <div id="check-container" class="d-block education-flex-basis-3">
+                    <input type="checkbox" id="check" name="check" value="check">
+                    <label for="check" class="ml-0-5"><a href="" class="bold">Kişisel Veri Kaydı Onay Formu</a> metnini
+                      kabul ediyorum.</label>
+                  </div>
+                </div>
+                <input id="reset" type="reset" value="İptal" class="ml-auto my-0 pl-0 mt-1 mr-1">
+                <button id="submit" type="submit" form="education-detail-form" value="Submit"
+                  class="primary-btn mt-1">Başvur</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="background-dark white-text pt-3 pb-3">
+      <div class="container">
+        <div class="row g-0 justify-content-center">
+          <div
+            class="col-lg-3 col-12 py-2 py-lg-0 px-md-1 order-last order-lg-first d-flex flex-column align-items-lg-left align-items-center">
+            <img src="./stylesheet/img/nav-logo.png" alt="">
+            <div class="d-flex mt-2">
+              <a href="" class="mr-0-5"><img src="./stylesheet/icons/facebook-light.svg" alt="" /></a>
+              <a href="" class="mx-0-5"><img src="./stylesheet/icons/instagram-light.svg" alt="" /></a>
+              <a href="" class="ml-0-5"><img src="./stylesheet/icons/youtube-light.svg" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-12 py-2 py-lg-0 px-md-1">
+            <span class="fs-20-mobile bold title-border-bottom">Kurumsal</span>
+            <ul>
+              <li><a href="" class="d-inline-block mb-1 mt-1-5">Hakkkımızda</li></a>
+              <li><a href="" class="d-inline-block">Dronmarket</li></a>
+              <li><a href="" class="d-inline-block mt-1">Dronmarket Blog</li></a>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-12 py-2 py-lg-0 px-md-1">
+            <span class="fs-20-mobile bold title-border-bottom">Akademi</span>
+            <ul>
+              <li><a href="" class="d-inline-block mb-1 mt-1-5">Eğitim Talebi</li></a>
+              <li><a href="" class="d-inline-block">Belge Sorgulama</li></a>
+              <li><a href="" class="d-inline-block my-1">Eğitimlerimiz</li></a>
+              <li><a href="" class="d-inline-block">Akademik Kadro</li></a>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-12 py-2 py-lg-0 px-md-1">
+            <span class="fs-20-mobile bold title-border-bottom">İletişim</span>
+            <ul>
+              <li><a href="tel:+908505328797" class="d-inline-block mb-1 mt-1-5"><img
+                    src="./stylesheet/icons/phone-yellow.svg" alt="" class="mr-1 vertical-align-middle" />0850 532 87
+                  97</a></li>
+              <li><a href="mailto:destek@dronmarket.com" class="d-inline-block"><img
+                    src="./stylesheet/icons/mail-yellow.svg" alt=""
+                    class="mr-1 vertical-align-middle" />destek@dronmarket.com</a></li>
+              <li><a href="https://g.page/dronmarket?share" target="_blank" class="d-inline-block mt-1"><img
+                    src="./stylesheet/icons/pin-yellow.svg" alt="" class="mr-1 vertical-align-middle" />Hasanpaşa Mh.
+                  Uzunçayır Cad. Yapı İş Merkezi B1 Blok No:25 İstanbul/Kadıköy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="yellow-bg">
+      <p class="text-center white-text py-1">Copyright 2021 © Dronmarket. Tüm Hakları Saklıdır.</p>
+    </div>
+  </footer>
+  <script src="./stylesheet/js/main.js"></script>
+</body>
+
+</html>
